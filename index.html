@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 每日新闻 · 2026-03-09</title>
+<style>
+:root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --hover: #1f2937; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 0; }
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 24px 20px; text-align: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.header h1 { font-size: 24px; margin-bottom: 4px; }
+.header .date { color: var(--muted); font-size: 14px; }
+.nav { display: flex; overflow-x: auto; gap: 8px; padding: 12px 16px; background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 72px; z-index: 9; }
+.nav a { white-space: nowrap; padding: 6px 14px; border-radius: 20px; background: var(--bg); color: var(--muted); text-decoration: none; font-size: 13px; border: 1px solid var(--border); transition: all 0.2s; }
+.nav a:hover, .nav a.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.container { max-width: 720px; margin: 0 auto; padding: 16px; }
+.category { margin-bottom: 24px; }
+.category-title { font-size: 18px; font-weight: 700; padding: 12px 0; border-bottom: 2px solid var(--accent); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.news-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; overflow: hidden; transition: all 0.2s; }
+.news-item:hover { border-color: var(--accent); transform: translateY(-1px); }
+.news-title { padding: 14px 16px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px; font-size: 15px; font-weight: 500; }
+.news-title .num { color: var(--accent); font-weight: 700; min-width: 20px; }
+.news-title .arrow { color: var(--muted); margin-left: auto; transition: transform 0.2s; font-size: 12px; min-width: 16px; }
+.news-item.open .news-title .arrow { transform: rotate(90deg); }
+.news-detail { display: none; padding: 0 16px 14px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
+.news-item.open .news-detail { display: block; padding-top: 12px; }
+.news-detail .desc { margin-bottom: 8px; line-height: 1.5; }
+.news-detail .meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+.news-detail a { color: var(--accent); text-decoration: none; }
+.news-detail a:hover { text-decoration: underline; }
+.news-detail .time { color: var(--muted); }
+.footer { text-align: center; padding: 24px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); margin-top: 20px; }
+@media (prefers-color-scheme: light) {
+  :root { --bg: #f6f8fa; --card: #fff; --border: #d0d7de; --text: #1f2328; --muted: #656d76; --accent: #0969da; --hover: #f3f4f6; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📰 每日新闻速递</h1>
+  <div class="date">2026-03-09 · PDT 17:41 更新</div>
+</div>
+<div class="nav">
+  <a href="#cat-0" onclick="scrollToCat(0)">🇺🇸 美国政治</a>
+  <a href="#cat-1" onclick="scrollToCat(1)">🪖 美国军事</a>
+  <a href="#cat-2" onclick="scrollToCat(2)">💰 美国经济</a>
+  <a href="#cat-3" onclick="scrollToCat(3)">🔬 美国科技</a>
+  <a href="#cat-4" onclick="scrollToCat(4)">🇨🇦 加拿大</a>
+  <a href="#cat-5" onclick="scrollToCat(5)">🏔️ 温哥华</a>
+  <a href="#cat-6" onclick="scrollToCat(6)">🏘️ 列治文</a>
+</div>
+<div class="container">
+
+  <div class="category" id="cat-0">
+    <div class="category-title">🇺🇸 美国政治</div>
+    
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">1</span>
+        <span>Tennessee GOP Rep says Muslims 'don't belong in American society'</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Rep. Andy Ogles' social media post is the latest in a series of Islamophobic statements from House Republicans.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/g-s1-113033/tennessee-gop-rep-says-muslims-dont-belong-in-american-society" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:22</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>Trump says U.S. is 'achieving major strides' in Iran toward military objectives</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">President Trump held his first news conference since the beginning of the U.S.-Israel-led Iran war on Monday as oil and gas prices soared, throwing the global economy into turmoil.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/nx-s1-5742591/trump-press-conference-as-u-s-israel-led-iran-war-enters-second-week" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 20:59</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>Top Arizona lawmaker says he's complied with a subpoena for 2020 election records</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Arizona's state Senate president says he has complied with a subpoena he received last week seeking records from a flawed, Republican-led review of the 2020 election in Maricopa County.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/nx-s1-5742633/arizona-maricopa-county-2020-records-petersen" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 18:36</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>What to know about Mojtaba Khamenei, Iran's new supreme leader</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The second son of the late supreme leader keeps a low profile. But he's long been viewed as wielding his power behind the scenes, from crushing dissent to influencing presidential elections.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/nx-s1-5742375/mojtaba-khamenei-iran-supreme-leader" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 18:11</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>Anthropic sues the Trump administration over 'supply chain risk' label</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The Pentagon told suppliers they can't use Anthropic's artificial intelligence tools after the company said it would not let its tech be used for autonomous weapons and mass domestic surveillance.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/nx-s1-5742548/anthropic-pentagon-lawsuit-amodai-hegseth" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 17:30</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>Trump is using immigration policy to suppress speech, lawsuit claims</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">A new lawsuit accuses the administration of violating the First Amendment by threatening the visas of researchers for work on disinformation and content moderation of social media.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/nx-s1-5741213/trump-censorship-visas-deportation-lawsuit" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 15:35</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>Does Iraq war hold lessons for Iran on regime change?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">President Trump's war against Iran carries echoes of the 2003 war in Iraq. NPR's Leila Fadel explores the lessons learned to understand whether regime change stands a chance in neighboring Iran.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/nx-s1-5739280/does-iraq-war-hold-lessons-for-iran-on-regime-change" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 09:46</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">8</span>
+        <span>The next redistricting battle might be who is counted in state legislative districts</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">A Republican push to alter the census may lead to a radical shift in redistricting for state legislatures — drawing districts that don't take into account children and non-U.S. citizen adults.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/03/09/nx-s1-5613878/us-census-citizenship-question-redistricting" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 09:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category" id="cat-1">
+    <div class="category-title">🪖 美国军事</div>
+    
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">1</span>
+        <span>US Air Force seeks sources for Stand-in Attack Weapon compatible with F-47, B-21</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">This marks the first time the F-47 has appeared by name in a public Air Force acquisition document tied to a specific weapon system.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/air/2026/03/09/us-air-force-seeks-sources-for-stand-in-attack-weapon-compatible-with-f-47-b-21/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 23:43</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>US, Iran spar over status of Iranian warship sunk by submarine</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The United States and Iran have offered sharply different accounts of the sinking of an Iranian warship in the Indian Ocean last week.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/news/your-military/2026/03/09/us-iran-spar-over-status-of-iranian-warship-sunk-by-submarine/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 20:45</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>US B-1B Lancers arrive at RAF Fairford as strikes on Iran intensify</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The U.K. Ministry of Defence confirmed Saturday that U.S. forces had begun using the British base for “specific defensive operations.&quot;</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/news/your-military/2026/03/09/us-b-1b-lancers-arrive-at-raf-fairford-as-strikes-on-iran-intensify/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 19:39</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>Prewar US intel found intervention in Iran wasn’t likely to change leadership</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">A February intelligence assessment determined that American military intervention was not likely to lead to regime change in the Islamic Republic.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/news/your-military/2026/03/09/prewar-us-intel-found-intervention-in-iran-wasnt-likely-to-change-leadership/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 18:44</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>NATO to study what-if scenarios that could cause Arctic conflict with Russia</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The alliance's biennial Cold Response drill will take place from March 9-19 across Norway.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/europe/2026/03/09/nato-to-study-what-if-scenarios-that-could-cause-arctic-conflict-with-russia/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 16:54</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>NATO defenses shoot down ballistic missile in Turkey</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The ballistic missile was downed by NATO units stationed in the eastern Mediterranean.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/europe/2026/03/09/nato-defenses-shoot-down-ballistic-missile-in-turkey/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 15:53</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>Turkey sends six F-16 fighters to Northern Cyprus amid Iran missile threats</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The deployment adds to the buildup of forces in the region following Iranian drone and missile attacks there.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/europe/2026/03/09/turkey-sends-six-f-16-fighters-to-northern-cyprus-amid-iran-missile-threats/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 12:59</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">8</span>
+        <span>Finland readies itself to be able to host nukes in longtime policy departure</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The proposed law change would bring the country in line with NATO's nuclear-deterrence architecture, the government argues.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/europe/2026/03/09/finland-readies-itself-to-be-able-to-host-nukes-in-longtime-policy-departure/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 10:26</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category" id="cat-2">
+    <div class="category-title">💰 美国经济</div>
+    
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">1</span>
+        <span>HPE's stock rises as earnings benefit from two big AI trends</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The company lifted its outlook for networking revenue and disclosed a big bump in orders for enterprise AI servers.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/hpes-stock-rises-as-earnings-benefit-from-two-big-ai-trends-a3df2732?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-10 00:18</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>'I find this very worrying': A friend lost her home. Why are foreclosures in America on the rise?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">She is wondering if she will ever get her $100,000 in equity back.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/i-find-this-very-worrying-a-friends-home-fell-into-foreclosure-what-on-earth-is-going-on-6ca57472?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-10 00:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>'I don't own a home': I'm 62, unemployed and have $1.5 million for retirement. Can I afford to divorce my husband?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">He has no loyalty to me or our vows.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/i-dont-own-a-home-im-62-unemployed-and-have-1-5-million-saved-can-i-afford-to-divorce-my-husband-f5887515?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 23:20</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>Trump announces sanctions relief to ease oil prices, says Iran war to end 'very soon'</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">President Donald Trump said the U.S. is waiving oil-related sanctions on certain countries in an effort to ease crude prices, as he estimated the war with Iran would end very soon.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/trump-announces-sanctions-relief-to-ease-oil-prices-says-iran-war-to-end-very-soon-ab0ee595?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 22:44</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>The NFL's Dolphins are paying a record $99.2 million to get a player off their team</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Here's why some NFL teams are giving their players, including Tua Tagovailoa, staggering amounts of money to stop playing for them.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/the-nfls-dolphins-are-paying-a-record-99-2-million-to-get-a-player-off-their-team-872a1e8a?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 22:02</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>An already chaotic spring travel season is colliding with effects of Iran conflict</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Americans who thought spring break would offer rest and relaxation after a tough winter may be in for a rude awakening.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/an-already-chaotic-spring-travel-season-is-colliding-with-effects-of-iran-conflict-5201b5b4?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:45</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>'I am stuck in a low-income trap': I'm a teacher and very good at my job. Will I ever earn six figures?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">My low salary requires me to have multiple other part-time jobs.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/i-am-stuck-in-a-low-income-trap-im-a-teacher-will-i-ever-earn-six-figures-5f7dd2b9?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:15</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">8</span>
+        <span>Treasury yields halt climb after Trump reportedly signals Iran war may end soon</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The yield on the 2-year Treasury note had been rising Monday on inflation fears after oil prices surged.</div>
+        <div class="meta">
+          <a href="https://www.marketwatch.com/story/treasury-yields-climb-as-investors-fear-stagflation-75212d5d?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:06</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category" id="cat-3">
+    <div class="category-title">🔬 美国科技</div>
+    
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">1</span>
+        <span>Apple smart home display rumors now point to a fall launch with iOS 27</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The rumored &quot;HomePod with a screen&quot; we've heard so much about was reportedly lined up for launch in 2025, and then this spring, and now, according to the latest updates, it's on the shelf until this f</div>
+        <div class="meta">
+          <a href="https://www.theverge.com/ai-artificial-intelligence/891723/apple-homepad-delay-rumor" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 23:39</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>Electric air taxis are about to take flight in 26 states</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The federal government has selected eight proposals to test electric aircraft across 26 states.</div>
+        <div class="meta">
+          <a href="https://techcrunch.com/2026/03/09/electric-air-taxis-are-about-to-take-flight-in-26-states/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 22:30</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>The government shutdown is hitting airports — but not ICE</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Chaos reigned at airports across the country last weekend, with thousands of travelers reportedly waiting in hours-long security lines thanks to staffing shortages. Transportation Security Administrat</div>
+        <div class="meta">
+          <a href="https://www.theverge.com/policy/891686/dhs-government-shutdown-ice-cbp-tsa-airports" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:52</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>Everything from the last week of everything is gambling now</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Kalshi is facing backlash from its own users after a class action lawsuit was filed last week alleging it failed to pay out as promised for wagers regarding when Iranian Supreme Leader Ayatollah Ali K</div>
+        <div class="meta">
+          <a href="https://www.theverge.com/tech/891676/kalshi-iran-prediction-markets" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:18</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>OpenAI and Google employees rush to Anthropic's defense in DOD lawsuit</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">More than 30 OpenAI and Google DeepMind employees signed onto a statement supporting Anthropic's lawsuit against the Defense Department after the agency labeled the AI firm a supply-chain risk, accord</div>
+        <div class="meta">
+          <a href="https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:15</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>‘Cash Apples’ is giving away $500,000 to people who click on trees in a web browser</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Want to make real money just by clicking on virtual trees? Starting today at 1PM PT / 4PM ET, residents of the United States can begin an online hunt for golden apples in a cutesy web game - collect e</div>
+        <div class="meta">
+          <a href="https://www.theverge.com/games/891544/cash-apples-is-giving-away-500000-to-people-who-click-on-trees-in-a-web-browser" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 21:04</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>Employees across OpenAI and Google support Anthropic’s lawsuit against the Pentagon</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">On Monday, Anthropic filed its lawsuit against the Department of Defense over being designated as a supply chain risk. Hours later, nearly 40 employees from OpenAI and Google - including Jeff Dean, Go</div>
+        <div class="meta">
+          <a href="https://www.theverge.com/ai-artificial-intelligence/891514/anthropic-pentagon-lawsuit-amicus-brief-openai-google" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 20:48</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">8</span>
+        <span>Quad Cortex mini amp modeler: All the power, half the size</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">A warehouse of guitar gear in the palm of your hand.</div>
+        <div class="meta">
+          <a href="https://arstechnica.com/reviews/2026/03/quad-cortex-mini-insane-amp-modeling-power-for-the-discerning-guitarist/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 20:36</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category" id="cat-4">
+    <div class="category-title">🇨🇦 加拿大</div>
+    
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">1</span>
+        <span>Ford mulls taking over Toronto’s stake in Billy Bishop Airport as he pushes for expansion</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Ontario would consider using expropriation to override city and allow jets, source says</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/canada/article-ford-mulls-taking-over-torontos-stake-in-billy-bishop-airport-as-he/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-10 00:21</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>Ottawa allows TikTok to continue operations</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Approval is subject to new legally binding undertakings provided by TikTok Canada, Industry Minister Melanie Joly said</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/world/article-ottawa-tiktok-bytedance/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-10 00:10</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>PEI to collect voluntary info about race, ethnicity in health card applications</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Project’s goals include better understanding differences in health outcomes, flagging gaps in care and improving services</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/canada/article-pei-to-collect-voluntary-info-about-race-ethnicity-in-health-card/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 23:17</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>Musqueam deal ‘nothing to do with’ private property, says Marc Miller</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Culture Minister says agreement is small step forward for First Nation that has been fighting for its rights since B.C. was settled</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/canada/british-columbia/article-musqueam-private-property-marc-miller/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 22:44</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>Toronto Film Critics Association vows to make changes after controversial speech edits trigger mass resignations</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">TFCA’s acting president apologized to Elle-Máijá Tailfeathers after her acceptance speech was edited to remove remarks expressing support for Palestine</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/culture/film-and-tv/film/article-tfca-elle-maija-tailfeathers-speech/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 18:14</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>Globe Climate: Water and oil in the Middle East</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Oil still powers the world, but water should not be forgotten in this war</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/canada/article-globe-climate-water-and-oil-in-the-middle-east/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 17:55</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>Crown in Frank Stronach trial to only seek convictions on seven of 12 original charges</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Prosecution concedes it can’t meet threshold of proof beyond a reasonable doubt on two charges of sexual assault related to two complainants</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/canada/article-frank-stronach-sexual-assault-trial-3/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 15:53</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">8</span>
+        <span>Ottawa allocates up to $94.5-million to improve labour-market data on key sectors</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Government is targeting industries that represent nearly two-thirds of Canada’s GDP</div>
+        <div class="meta">
+          <a href="https://www.theglobeandmail.com/business/article-ottawa-labour-market-data-tariffs-industries/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 14:21</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category" id="cat-5">
+    <div class="category-title">🏔️ 温哥华</div>
+    
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">1</span>
+        <span>Hosting Canadas The Price Is Right Tonight is a job made for Howie Mandel</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Howie Mandel hosts the Canadian edition of the longest-running game show in history</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/entertainment/hosting-canadas-the-price-is-right-tonight-is-a-job-made-for-howie-mandel" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-10 00:34</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>Vaughn Palmer: Its not a slush fund, says B.C. NDP</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Opinion: The New Democrats last week passed legislation to give the cabinet open-ended authority to support favoured businesses with loans and grants from a $400 million strategic investment fund</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/opinion/columnists/vaughn-palmer-400-million-strategic-investment-fund-not-a-slush-fund" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-10 00:18</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>Expanded Trans Mountain pipeline almost doubles oil exports from Port of Vancouver</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The Port of Vancouver handled a record 170 million tonnes of cargo in 2025, including new highs for oil, grain and number of containers</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/business/expanded-trans-mountain-pipeline-almost-doubles-oil-exports-from-port-of-vancouver" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-10 00:08</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>Want to protest outside a place of worship in B.C.? New law would require you to keep your distance</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Protests and other disturbances will be restricted within 20 metres of such sites. Bubble zones around schools have been in place since 2024</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/news/new-bc-law-restricting-protests-churches-places-worship-schools-bubble-zones" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 23:58</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>Defence begins arguments for trio accused of murdering Abbotsford couple</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Abhijeet Singh, 22, is charged with first-degree murder along with 22-year-old Khushveer Toor and 20-year-old Gurkaran Singh, two students from India who worked for his Surrey cleaning company</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/news/abbotsford-couple-murdered-trial-defence-arguments" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 23:14</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>Letters to The Sun: Year-round standard time in B.C. wasnt given due consideration</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Re: B.C. makes daylight time permanent after years of promises Premier David Eby startled everyone last week by suddenly declaring that the time change on March 8 would be the last time we have to end</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/opinion/letters/letters-to-the-sun-3" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 23:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>RCMP with guns drawn enter Burnaby North high school but threat was false</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">The school went into lockdown but that has since been lifted</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/news/burnaby-north-secondar-school-threat-false-rcmp" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 22:06</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">8</span>
+        <span>B.C. gas prices soar as war in Iran hits worldwide oil supply</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">As the global supply chain goes, so goes the local cost of gas. Expect prices to keep rising in the weeks ahead</div>
+        <div class="meta">
+          <a href="https://vancouversun.com/news/bc-gas-prices-soar-iran-war-oil-supply" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-03-09 19:40</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category" id="cat-6">
+    <div class="category-title">🏘️ 列治文</div>
+    
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">1</span>
+        <span>Popular mango bubble tea store in Richmond closes - Vancouver Is Awesome</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Popular mango bubble tea store in Richmond closes&amp;nbsp;&amp;nbsp;Vancouver Is Awesome</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-09 22:14</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>Missing 53-year-old has been found: Richmond RCMP - richmond-news.com</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Missing 53-year-old has been found: Richmond RCMP&amp;nbsp;&amp;nbsp;richmond-news.com</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-09 21:59</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>[BREAKING] MACU Tea Announces Closure Of Its Richmond Location - Noms Magazine</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">[BREAKING] MACU Tea Announces Closure Of Its Richmond Location&amp;nbsp;&amp;nbsp;Noms Magazine</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-09 20:17</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>People upset after Metro Vancouver fruit tea shop announces closure of another location - Daily Hive Vancouver</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">People upset after Metro Vancouver fruit tea shop announces closure of another location&amp;nbsp;&amp;nbsp;Daily Hive Vancouver</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-09 20:01</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>Speed Skating: BC Short Track Championships - richmond-news.com</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Speed Skating: BC Short Track Championships&amp;nbsp;&amp;nbsp;richmond-news.com</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-09 18:57</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>Planned power outages, roadwork to impact Richmond this week - richmond-news.com</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Planned power outages, roadwork to impact Richmond this week&amp;nbsp;&amp;nbsp;richmond-news.com</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-09 16:45</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>Candidates coming forward for fall Richmond city election - richmond-news.com</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Candidates coming forward for fall Richmond city election&amp;nbsp;&amp;nbsp;richmond-news.com</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-09 13:30</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">8</span>
+        <span>Richmond's 92-year-old resident keeps life in stitches - richmond-news.com</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="desc">Richmond's 92-year-old resident keeps life in stitches&amp;nbsp;&amp;nbsp;richmond-news.com</div>
+        <div class="meta">
+          <span></span>
+          <span class="time">2026-03-08 20:30</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">🦐 小虾米 · 自动生成 · 数据来自 RSS</div>
+<script>
+function toggle(el) { el.classList.toggle('open'); }
+function scrollToCat(i) {
+  document.getElementById('cat-' + i)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>
