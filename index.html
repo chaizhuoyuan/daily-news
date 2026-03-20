@@ -9,6 +9,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 0; }
 .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 24px 20px; text-align: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.refresh-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 6px 16px; border-radius: 20px; border: 1px solid var(--accent); background: transparent; color: var(--accent); font-size: 13px; cursor: pointer; transition: all 0.2s; }
+.refresh-btn:hover { background: var(--accent); color: #fff; }
+.refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .header h1 { font-size: 24px; margin-bottom: 4px; }
 .header .date { color: var(--muted); font-size: 14px; }
 .nav { display: flex; overflow-x: auto; gap: 8px; padding: 12px 16px; background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 72px; z-index: 9; -webkit-overflow-scrolling: touch; }
@@ -81,7 +84,35 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
 <div class="header">
   <h1>📰 每日新闻速递</h1>
   <div class="date">2026-03-14 · PDT 13:51 更新</div>
+  <button class="refresh-btn" onclick="triggerRefresh(this)" title="触发 GitHub Actions 重新生成">🔄 刷新新闻</button>
 </div>
+<script>
+async function triggerRefresh(btn) {
+  const token = prompt('请输入 GitHub PAT（需要 workflow 权限）：');
+  if (!token) return;
+  btn.disabled = true;
+  btn.textContent = '⏳ 触发中...';
+  try {
+    const res = await fetch('https://api.github.com/repos/chaizhuoyuan/daily-news/actions/workflows/daily-update.yml/dispatches', {
+      method: 'POST',
+      headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: 'main', inputs: { reason: 'manual-web' } })
+    });
+    if (res.status === 204) {
+      btn.textContent = '✅ 已触发！约 2-3 分钟后刷新页面';
+      setTimeout(() => { btn.disabled = false; btn.textContent = '🔄 刷新新闻'; }, 30000);
+    } else {
+      const err = await res.text();
+      btn.textContent = `❌ 失败: ${res.status}`;
+      btn.disabled = false;
+      console.error(err);
+    }
+  } catch(e) {
+    btn.textContent = '❌ 网络错误';
+    btn.disabled = false;
+  }
+}
+</script>
 <div class="nav">
   <a href="#cat-us-market" class="market-tab" onclick="document.getElementById('cat-us-market')?.scrollIntoView({behavior:'smooth',block:'start'})">📊 美股板块</a>
   <a href="#cat-a-market" class="market-tab" onclick="document.getElementById('cat-a-market')?.scrollIntoView({behavior:'smooth',block:'start'})">📊 A股板块</a>
