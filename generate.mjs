@@ -354,11 +354,64 @@ async function fetchAShareData() {
       }
     } catch (e) {}
 
-    return { indices: results, sectors: sectorData };
+    // Fetch weekly signals for top sectors using index_weekly
+    let sectorSignals = [];
+    try {
+      // Get major sector index weekly K-lines for signal calculation
+      const sectorIndices = [
+        { code: '399998.SZ', name: '中证煤炭' }, { code: '399967.SZ', name: '中证军工' },
+        { code: '399986.SZ', name: '中证银行' }, { code: '399975.SZ', name: '中证全指证券' },
+        { code: '399808.SZ', name: '中证新能' }, { code: '399976.SZ', name: '中证新能车' },
+        { code: '399396.SZ', name: '国证食品' }, { code: '399394.SZ', name: '国证医药' },
+        { code: '931009.CSI', name: '中证人工智能' }, { code: '399006.SZ', name: '创业板指' },
+        { code: '000016.SH', name: '上证50' }, { code: '000905.SH', name: '中证500' },
+        { code: '399303.SZ', name: '国证2000' },
+      ];
+      for (const si of sectorIndices) {
+        try {
+          const wkBody = {
+            api_name: 'index_weekly',
+            token: TUSHARE_TOKEN,
+            params: { ts_code: si.code, start_date: formatTushareDate(-200), end_date: dateStr },
+            fields: 'ts_code,trade_date,close'
+          };
+          const wkRaw = await postJson('https://api.tushare.pro', wkBody);
+          const wkData = JSON.parse(wkRaw);
+          if (wkData.data?.items?.length >= 6) {
+            const fields = wkData.data.fields;
+            const prices = wkData.data.items.map(item => {
+              const row = {};
+              fields.forEach((f, i) => row[f] = item[i]);
+              return { date: row.trade_date, close: row.close };
+            }).sort((a, b) => a.date.localeCompare(b.date));
+            const bullN = calcSignalN(prices, 4, 30, 'bull');
+            const bearN = calcSignalN(prices, 4, 30, 'bear');
+            sectorSignals.push({ name: si.name, code: si.code, bullN, bearN });
+          }
+        } catch (e) {}
+      }
+    } catch (e) {}
+
+    return { indices: results, sectors: sectorData, sectorSignals };
   } catch (e) {
     console.error('Tushare fetch error:', e.message);
-    return { indices: [], sectors: [] };
+    return { indices: [], sectors: [], sectorSignals: [] };
   }
+}
+
+// 乾/坤信号计算（和蝴蝶图逻辑一致）
+function calcSignalN(prices, lookback, maxN, type) {
+  const n = prices.length;
+  if (n < lookback + 2) return 0;
+  let count = 0;
+  for (let i = 0; i < maxN; i++) {
+    const ci = n - 1 - i;
+    const ri = ci - lookback;
+    if (ri < 0) break;
+    if (type === 'bull' ? prices[ci].close > prices[ri].close : prices[ci].close < prices[ri].close) count++;
+    else break;
+  }
+  return count;
 }
 
 function formatTushareDate(daysOffset) {
@@ -388,6 +441,12 @@ async function generateMarketAnalysis(newsHeadlines, usMarketData, aShareData) {
       `${s.name}: ${s.pct_change >= 0 ? '+' : ''}${s.pct_change?.toFixed(2) || 'N/A'}%`
     ).join(', ');
 
+    const signalSummary = (aShareData.sectorSignals || []).map(s => {
+      const isBull = s.bullN > 0 && s.bullN >= s.bearN;
+      const sig = isBull ? `乾${s.bullN}` : (s.bearN > 0 ? `坤${s.bearN}` : '无');
+      return `${s.name}: ${sig}`;
+    }).join(', ');
+
     const prompt = `你是一个专业的股市分析师。基于以下今日数据，生成简洁的市场分析。
 
 ## 美股板块表现
@@ -401,6 +460,10 @@ ${topSectors || '数据暂无'}
 
 ## A股领跌板块
 ${bottomSectors || '数据暂无'}
+
+## A股板块周线乾坤信号
+${signalSummary || '数据暂无'}
+（乾N=连续N周收盘高于4周前=上升趋势，坤N=连续N周低于4周前=下降趋势）
 
 ## 今日重要新闻
 ${newsHeadlines.slice(0, 30).join('\n')}
@@ -530,6 +593,23 @@ function generateMarketHtml(usData, aShareData, analysis) {
           </div>`).join('')}
         </div>
       </div>` : ''}
+      ${(aShareData.sectorSignals?.length > 0) ? `
+      <div class="market-section">
+        <div class="market-subtitle">🦋 板块乾坤信号（周线）</div>
+        <div class="sector-list">
+          ${aShareData.sectorSignals.map(s => {
+            const isBull = s.bullN > 0 && s.bullN >= s.bearN;
+            const sig = isBull ? `乾${s.bullN}` : (s.bearN > 0 ? `坤${s.bearN}` : '无');
+            const cls = isBull ? 'up' : (s.bearN > 0 ? 'down' : '');
+            return `
+          <div class="sector-row ${cls}">
+            <span class="sr-name">${escapeHtml(s.name)}</span>
+            <span class="sr-change" style="font-weight:bold;">${sig}</span>
+          </div>`;
+          }).join('')}
+        </div>
+        <div style="font-size:10px;color:#999;margin-top:4px;">乾N=连续N周收盘价高于4周前 坤N=连续N周低于4周前</div>
+      </div>` : ''}
     </div>
   </div>`;
   }
@@ -596,9 +676,9 @@ async function main() {
     }
   }
 
-  // Generate AI analysis
-  console.log('Generating AI market analysis...');
-  const analysis = await generateMarketAnalysis(allHeadlines, usMarketData, aShareData);
+  // Skip Gemini AI analysis (replaced by Claude in cron)
+  console.log('Skipping Gemini AI analysis...');
+  const analysis = '<p>AI 分析由 Claude 提供，请查看 Telegram 日报。</p>';
 
   // Generate market data HTML
   const marketHtml = generateMarketHtml(usMarketData, aShareData, analysis);
@@ -606,8 +686,11 @@ async function main() {
   // Build the full page
   const html = buildFullHtml(dateStr, pdtNow, newsCategories, marketHtml, usMarketData, aShareData);
 
-  fs.writeFileSync('/home/node/.openclaw/workspace/daily-news.html', html);
+  const outputPath = '/home/claudebot/daily-news-output/index.html';
+  fs.mkdirSync('/home/claudebot/daily-news-output', { recursive: true });
+  fs.writeFileSync(outputPath, html);
   console.log(`Generated: ${html.length} bytes, ${newsCategories.length} news categories, ${usMarketData.length} US ETFs, ${aShareData.indices.length} A-share indices`);
+  console.log(`Output: ${outputPath}`);
 }
 
 async function fetchAllNews(cutoff) {
@@ -618,8 +701,11 @@ async function fetchAllNews(cutoff) {
       try {
         const xml = await fetchUrl(feed.url);
         const items = parseRSS(xml);
+        // Only include items from the last 7 days max
+        const maxAge = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
         const recent = items.filter(i => i.date > cutoff);
-        allItems.push(...(recent.length > 0 ? recent : items.slice(0, 5)));
+        const notTooOld = items.filter(i => i.date > maxAge);
+        allItems.push(...(recent.length > 0 ? recent : notTooOld.slice(0, 5)));
       } catch (e) {}
     }
 
@@ -765,7 +851,7 @@ ${newsCategories.map((cat, ci) => `
     </div>`).join('')}
   </div>`).join('')}
 </div>
-<div class="footer">🦐 小虾米 · 自动生成 · 数据来自 RSS + Yahoo Finance + Tushare + Gemini AI</div>
+<div class="footer">🦐 小虾米 · 自动生成 · 数据来自 RSS + Yahoo Finance + Tushare + Claude AI</div>
 <script>
 function toggle(el) { el.classList.toggle('open'); }
 </script>
@@ -773,4 +859,4 @@ function toggle(el) { el.classList.toggle('open'); }
 </html>`;
 }
 
-main().catch(console.error);
+main().then(() => process.exit(0)).catch(e => { console.error(e); process.exit(1); });
