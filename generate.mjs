@@ -681,9 +681,8 @@ async function main() {
     }
   }
 
-  // Skip Gemini AI analysis (replaced by Claude in cron)
-  console.log('Skipping Gemini AI analysis...');
-  const analysis = '<p>AI 分析由 Claude 提供，请查看 Telegram 日报。</p>';
+  // AI analysis
+  const analysis = await analyzeWithGemini(usMarketData, aShareData, allHeadlines);
 
   // Generate market data HTML
   const marketHtml = generateMarketHtml(usMarketData, aShareData, analysis);
