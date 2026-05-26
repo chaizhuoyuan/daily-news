@@ -682,7 +682,7 @@ async function main() {
   }
 
   // AI analysis
-  const analysis = await analyzeWithGemini(usMarketData, aShareData, allHeadlines);
+  const analysis = await generateMarketAnalysis(allHeadlines, usMarketData, aShareData);
 
   // Generate market data HTML
   const marketHtml = generateMarketHtml(usMarketData, aShareData, analysis);
