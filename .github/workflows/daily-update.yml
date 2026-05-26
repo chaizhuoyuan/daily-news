@@ -25,8 +25,9 @@ jobs:
 
       - name: Generate news page
         env:
+          CI: "true"
           TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node generate.mjs
 
       - name: Commit and push
