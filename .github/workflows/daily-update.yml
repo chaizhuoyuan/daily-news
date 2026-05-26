@@ -27,7 +27,7 @@ jobs:
         env:
           CI: "true"
           TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node generate.mjs
 
       - name: Commit and push

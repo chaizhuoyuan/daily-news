@@ -494,46 +494,26 @@ ${newsHeadlines.slice(0, 30).join('\n')}
 - 用 <span class="neutral"> 包裹中性内容
 - 简洁直接，不要套话废话`;
 
-    const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || '';
-    if (!ANTHROPIC_API_KEY) {
-      console.log('No ANTHROPIC_API_KEY, skipping AI analysis');
+    if (!GEMINI_API_KEY) {
+      console.log('No GEMINI_API_KEY, skipping AI analysis');
       return '<p>AI 分析暂时不可用（无 API Key）</p>';
     }
 
-    const url = 'https://api.anthropic.com/v1/messages';
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
     const body = {
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 2000,
-      messages: [{ role: 'user', content: prompt }],
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 2000,
+      }
     };
 
-    const raw = await new Promise((resolve, reject) => {
-      const data = JSON.stringify(body);
-      const req = https.request(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': ANTHROPIC_API_KEY,
-          'anthropic-version': '2023-06-01',
-          'Content-Length': Buffer.byteLength(data),
-        },
-        timeout: 30000,
-      }, (res) => {
-        let buf = '';
-        res.on('data', d => buf += d);
-        res.on('end', () => resolve(buf));
-      });
-      req.on('error', reject);
-      req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
-      req.write(data);
-      req.end();
-    });
-
-    const result = JSON.parse(raw);
-    const text = result.content?.[0]?.text || '';
+    const raw = await postJson(url, body, 30000);
+    const data = JSON.parse(raw);
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
     return text;
   } catch (e) {
-    console.error('Claude analysis error:', e.message);
+    console.error('Gemini analysis error:', e.message);
     return '<p>AI 分析暂时不可用</p>';
   }
 }
