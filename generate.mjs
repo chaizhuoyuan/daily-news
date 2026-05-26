@@ -17,8 +17,8 @@ import fs from 'fs';
 // ============================================================
 // CONFIG
 // ============================================================
-const GEMINI_API_KEY = 'AIzaSyB43Jqp8rUgDd7cM7aWyWgClvELvTrAny0';
-const TUSHARE_TOKEN = 'bb30a9f53019f70a1bbf2edb5d67587974a0cc5cde8f11f680672261';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
+const TUSHARE_TOKEN = process.env.TUSHARE_TOKEN || '';
 
 // US Sector ETFs
 const US_SECTOR_ETFS = [
@@ -686,8 +686,9 @@ async function main() {
   // Build the full page
   const html = buildFullHtml(dateStr, pdtNow, newsCategories, marketHtml, usMarketData, aShareData);
 
-  const outputPath = '/home/claudebot/daily-news-output/index.html';
-  fs.mkdirSync('/home/claudebot/daily-news-output', { recursive: true });
+  const outputDir = process.env.CI ? '.' : '/home/claudebot/daily-news-output';
+  const outputPath = outputDir + '/index.html';
+  fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(outputPath, html);
   console.log(`Generated: ${html.length} bytes, ${newsCategories.length} news categories, ${usMarketData.length} US ETFs, ${aShareData.indices.length} A-share indices`);
   console.log(`Output: ${outputPath}`);
