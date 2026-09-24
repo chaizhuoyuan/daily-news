@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📰 每日新闻 · 2026-09-23</title>
+<title>📰 每日新闻 · 2026-09-24</title>
 <style>
 :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --hover: #1f2937; --up-color: #2ea043; --down-color: #f85149; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -80,9 +80,10 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
 <body>
 <div class="header">
   <h1>📰 每日新闻速递</h1>
-  <div class="date">2026-09-23 · PDT 11:47 更新</div>
+  <div class="date">2026-09-24 · PDT 11:48 更新</div>
 </div>
 <div class="nav">
+  <a href="#cat-us-market" class="market-tab" onclick="document.getElementById('cat-us-market')?.scrollIntoView({behavior:'smooth',block:'start'})">📊 美股板块</a>
   <a href="#cat-a-market" class="market-tab" onclick="document.getElementById('cat-a-market')?.scrollIntoView({behavior:'smooth',block:'start'})">📊 A股板块</a>
   <a href="#cat-analysis" class="market-tab" onclick="document.getElementById('cat-analysis')?.scrollIntoView({behavior:'smooth',block:'start'})">🧠 AI分析</a>
   <a href="#cat-0" class="" onclick="document.getElementById('cat-0')?.scrollIntoView({behavior:'smooth',block:'start'})">🇺🇸 美国政治</a>
@@ -99,46 +100,130 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
 </div>
 <div class="container">
 
+  <div class="category" id="cat-us-market">
+    <div class="category-title">📊 美股板块动态</div>
+    <div class="market-grid">
+      <div class="market-section">
+        <div class="market-subtitle">主要指数</div>
+        
+  <div class="market-card down">
+    <div class="mc-name">标普500 <span class="mc-symbol">SPY</span></div>
+    <div class="mc-price">$767.54</div>
+    <div class="mc-change">-0.04%</div>
+  </div>
+  <div class="market-card down">
+    <div class="mc-name">纳斯达克100 <span class="mc-symbol">QQQ</span></div>
+    <div class="mc-price">$740.66</div>
+    <div class="mc-change">-0.07%</div>
+  </div>
+  <div class="market-card down">
+    <div class="mc-name">道琼斯 <span class="mc-symbol">DIA</span></div>
+    <div class="mc-price">$512.78</div>
+    <div class="mc-change">-0.30%</div>
+  </div>
+      </div>
+      <div class="market-section">
+        <div class="market-subtitle">板块 ETF（按涨跌排序）</div>
+        <div class="sector-heatmap">
+          <div class="sector-block" style="background:rgba(46, 160, 67, 0.44891215895385583)">
+    <div class="sb-name">创新科技</div>
+    <div class="sb-change up">+1.79%</div>
+  </div><div class="sector-block" style="background:rgba(46, 160, 67, 0.34397139546346545)">
+    <div class="sb-name">通信</div>
+    <div class="sb-change up">+1.16%</div>
+  </div><div class="sector-block" style="background:rgba(46, 160, 67, 0.28032192820227636)">
+    <div class="sb-name">医疗</div>
+    <div class="sb-change up">+0.78%</div>
+  </div><div class="sector-block" style="background:rgba(46, 160, 67, 0.21547024498365058)">
+    <div class="sb-name">能源</div>
+    <div class="sb-change up">+0.39%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.17190898063065588)">
+    <div class="sb-name">房地产</div>
+    <div class="sb-change down">-0.13%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.1741005663357286)">
+    <div class="sb-name">消费</div>
+    <div class="sb-change down">-0.14%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.17597453949573164)">
+    <div class="sb-name">金融</div>
+    <div class="sb-change down">-0.16%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.21313694483531825)">
+    <div class="sb-name">科技</div>
+    <div class="sb-change down">-0.38%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.22481150576493017)">
+    <div class="sb-name">必需消费</div>
+    <div class="sb-change down">-0.45%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.2264313787218032)">
+    <div class="sb-name">半导体</div>
+    <div class="sb-change down">-0.46%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.2587596091047035)">
+    <div class="sb-name">工业</div>
+    <div class="sb-change down">-0.65%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.2778827275370152)">
+    <div class="sb-name">公用事业</div>
+    <div class="sb-change down">-0.77%</div>
+  </div><div class="sector-block" style="background:rgba(248, 81, 73, 0.35717316864684967)">
+    <div class="sb-name">材料</div>
+    <div class="sb-change down">-1.24%</div>
+  </div>
+        </div>
+      </div>
+      
+      <div class="market-section">
+        <div class="market-subtitle">大宗商品</div>
+        
+  <div class="market-card down">
+    <div class="mc-name">黄金 <span class="mc-symbol">GLD</span></div>
+    <div class="mc-price">$391.53</div>
+    <div class="mc-change">-0.34%</div>
+  </div>
+  <div class="market-card up">
+    <div class="mc-name">原油 <span class="mc-symbol">USO</span></div>
+    <div class="mc-price">$151.85</div>
+    <div class="mc-change">+2.03%</div>
+  </div>
+      </div>
+    </div>
+  </div>
   <div class="category" id="cat-a-market">
     <div class="category-title">📊 A股板块动态</div>
     <div class="market-grid">
       <div class="market-section">
-        <div class="market-subtitle">主要指数 (20260923)</div>
+        <div class="market-subtitle">主要指数 (20260924)</div>
         
         <div class="market-card down">
           <div class="mc-name">上证指数</div>
-          <div class="mc-price">3936.52</div>
-          <div class="mc-change">-0.39%</div>
+          <div class="mc-price">3888.37</div>
+          <div class="mc-change">-1.22%</div>
         </div>
         <div class="market-card down">
           <div class="mc-name">深证成指</div>
-          <div class="mc-price">13636.07</div>
-          <div class="mc-change">-0.64%</div>
+          <div class="mc-price">13316.97</div>
+          <div class="mc-change">-2.34%</div>
         </div>
         <div class="market-card down">
           <div class="mc-name">创业板指</div>
-          <div class="mc-price">3379.61</div>
-          <div class="mc-change">-0.60%</div>
+          <div class="mc-price">3288.95</div>
+          <div class="mc-change">-2.68%</div>
         </div>
         <div class="market-card down">
           <div class="mc-name">上证50</div>
-          <div class="mc-price">2883.77</div>
-          <div class="mc-change">-0.53%</div>
+          <div class="mc-price">2842.74</div>
+          <div class="mc-change">-1.42%</div>
         </div>
         <div class="market-card down">
           <div class="mc-name">沪深300</div>
-          <div class="mc-price">4517.28</div>
-          <div class="mc-change">-0.60%</div>
+          <div class="mc-price">4439.14</div>
+          <div class="mc-change">-1.73%</div>
         </div>
         <div class="market-card down">
           <div class="mc-name">中证500</div>
-          <div class="mc-price">7791.82</div>
-          <div class="mc-change">-0.47%</div>
+          <div class="mc-price">7624.07</div>
+          <div class="mc-change">-2.15%</div>
         </div>
         <div class="market-card down">
           <div class="mc-name">国证2000</div>
-          <div class="mc-price">10199.67</div>
-          <div class="mc-change">-0.08%</div>
+          <div class="mc-price">9988.60</div>
+          <div class="mc-change">-2.07%</div>
         </div>
       </div>
       
@@ -149,52 +234,52 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
           <div class="sector-row up">
             <span class="sr-rank">1</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+7.04%</span>
+            <span class="sr-change">+8.58%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">2</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+5.09%</span>
+            <span class="sr-change">+7.49%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">3</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+4.25%</span>
+            <span class="sr-change">+5.13%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">4</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+3.60%</span>
+            <span class="sr-change">+4.06%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">5</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+3.58%</span>
+            <span class="sr-change">+3.52%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">6</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+3.19%</span>
+            <span class="sr-change">+3.34%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">7</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+3.07%</span>
+            <span class="sr-change">+2.90%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">8</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+2.93%</span>
+            <span class="sr-change">+2.65%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">9</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+2.89%</span>
+            <span class="sr-change">+2.59%</span>
           </div>
           <div class="sector-row up">
             <span class="sr-rank">10</span>
             <span class="sr-name"></span>
-            <span class="sr-change">+2.85%</span>
+            <span class="sr-change">+2.39%</span>
           </div>
         </div>
       </div>
@@ -206,52 +291,52 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
           <div class="sector-row down">
             <span class="sr-rank">1</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-28.51%</span>
+            <span class="sr-change">-22.99%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">2</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-10.06%</span>
+            <span class="sr-change">-20.71%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">3</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-8.95%</span>
+            <span class="sr-change">-7.03%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">4</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-6.50%</span>
+            <span class="sr-change">-4.92%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">5</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-6.41%</span>
+            <span class="sr-change">-4.75%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">6</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-5.78%</span>
+            <span class="sr-change">-4.74%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">7</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-5.77%</span>
+            <span class="sr-change">-4.68%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">8</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-5.46%</span>
+            <span class="sr-change">-4.52%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">9</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-4.85%</span>
+            <span class="sr-change">-4.52%</span>
           </div>
           <div class="sector-row down">
             <span class="sr-rank">10</span>
             <span class="sr-name"></span>
-            <span class="sr-change">-4.20%</span>
+            <span class="sr-change">-4.50%</span>
           </div>
         </div>
       </div>
@@ -262,51 +347,51 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
           
           <div class="sector-row down">
             <span class="sr-name">中证煤炭</span>
-            <span class="sr-change" style="font-weight:bold;">坤1</span>
+            <span class="sr-change" style="font-weight:bold;">坤2</span>
           </div>
           <div class="sector-row up">
             <span class="sr-name">中证军工</span>
-            <span class="sr-change" style="font-weight:bold;">乾2</span>
+            <span class="sr-change" style="font-weight:bold;">乾3</span>
           </div>
           <div class="sector-row up">
             <span class="sr-name">中证银行</span>
-            <span class="sr-change" style="font-weight:bold;">乾3</span>
+            <span class="sr-change" style="font-weight:bold;">乾4</span>
           </div>
           <div class="sector-row down">
             <span class="sr-name">中证全指证券</span>
-            <span class="sr-change" style="font-weight:bold;">坤2</span>
+            <span class="sr-change" style="font-weight:bold;">坤3</span>
           </div>
           <div class="sector-row down">
             <span class="sr-name">中证新能</span>
-            <span class="sr-change" style="font-weight:bold;">坤3</span>
-          </div>
-          <div class="sector-row down">
-            <span class="sr-name">中证新能车</span>
-            <span class="sr-change" style="font-weight:bold;">坤3</span>
-          </div>
-          <div class="sector-row down">
-            <span class="sr-name">国证食品</span>
             <span class="sr-change" style="font-weight:bold;">坤4</span>
           </div>
           <div class="sector-row down">
+            <span class="sr-name">中证新能车</span>
+            <span class="sr-change" style="font-weight:bold;">坤4</span>
+          </div>
+          <div class="sector-row down">
+            <span class="sr-name">国证食品</span>
+            <span class="sr-change" style="font-weight:bold;">坤5</span>
+          </div>
+          <div class="sector-row down">
             <span class="sr-name">国证医药</span>
-            <span class="sr-change" style="font-weight:bold;">坤3</span>
+            <span class="sr-change" style="font-weight:bold;">坤4</span>
           </div>
           <div class="sector-row down">
             <span class="sr-name">创业板指</span>
-            <span class="sr-change" style="font-weight:bold;">坤3</span>
+            <span class="sr-change" style="font-weight:bold;">坤4</span>
           </div>
           <div class="sector-row down">
             <span class="sr-name">上证50</span>
-            <span class="sr-change" style="font-weight:bold;">坤3</span>
+            <span class="sr-change" style="font-weight:bold;">坤4</span>
           </div>
           <div class="sector-row down">
             <span class="sr-name">中证500</span>
-            <span class="sr-change" style="font-weight:bold;">坤3</span>
+            <span class="sr-change" style="font-weight:bold;">坤4</span>
           </div>
-          <div class="sector-row up">
+          <div class="sector-row down">
             <span class="sr-name">国证2000</span>
-            <span class="sr-change" style="font-weight:bold;">乾1</span>
+            <span class="sr-change" style="font-weight:bold;">坤1</span>
           </div>
         </div>
         <div style="font-size:10px;color:#999;margin-top:4px;">乾N=连续N周收盘价高于4周前 坤N=连续N周低于4周前</div>
@@ -320,11 +405,101 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Trump set to greet Xi for high-stakes state visit</span>
+        <span>What's at stake during the meeting between Trump and Xi</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Trump set to greet Xi for high-stakes state visit</div>
+        <div class="orig-title">What's at stake during the meeting between Trump and Xi</div>
+        <div class="desc">What can we expect from the Trump-Xi summit? NPR's A Martinez asks Daniel Kritenbrink, an assistant Secretary of State for East Asian and Pacific affairs in the Biden administration.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/09/24/nx-s1-5978803/whats-at-stake-during-the-meeting-between-trump-and-xi" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:45</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>Chinese leader Xi Jinping arrives in U.S. for first state visit in 11 years</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Chinese leader Xi Jinping arrives in U.S. for first state visit in 11 years</div>
+        <div class="desc">Chinese leader Xi Jinping arrived in the United States on Wednesday evening for his first state visit in 11 years.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/09/24/nx-s1-5978774/chinese-leader-xi-jinping-arrives-in-u-s-for-first-state-visit-in-11-years" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:45</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>Warren demands Trump officials explain removing a ban on interference in census data</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Warren demands Trump officials explain removing a ban on interference in census data</div>
+        <div class="desc">Democratic Sen. Elizabeth Warren asked Trump officials to explain why the Census Bureau's parent agency cut a ban on political interference from its scientific integrity policy, as NPR first reported.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/09/24/nx-s1-5979070/department-commerce-census-bureau-elizabeth-warren" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>Could the White House try its press ban again? A press freedom expert explains</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Could the White House try its press ban again? A press freedom expert explains</div>
+        <div class="desc">A federal judge's ruling restored CNN, MS Now and Politico's access to the White House. Gabe Rottman says better procedure alone may not resolve the broader First Amendment fight.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/09/24/nx-s1-5978805/whats-next-white-house-press-access-fight" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 08:44</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>Journalists for CNN, MS NOW and Politico return to the White House upon judge's orders</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Journalists for CNN, MS NOW and Politico return to the White House upon judge's orders</div>
+        <div class="desc">A federal judge ordered the Trump administration on Thursday to temporarily restore access to CNN, MS NOW and Politico, after they were banned from covering White House events by President Trump.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/09/24/nx-s1-5979582/judge-order-trump-restore-access-white-house" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 06:21</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>Results are in from the newest NPR/PBS News/Marist poll</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Results are in from the newest NPR/PBS News/Marist poll</div>
+        <div class="desc">People say they are more likely to choose a Democrat to represent them in Congress, and feel Democrats would be better at tackling top issues like the economy and foreign policy.</div>
+        <div class="meta">
+          <a href="https://www.npr.org/2026/09/23/nx-s1-5978130/results-are-in-from-the-newest-npr-pbs-news-marist-poll" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-23 21:14</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
+        <span>Trump and Xi meet at moment of global consequence</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Trump and Xi meet at moment of global consequence</div>
         <div class="desc">It is the second time the leaders are meeting this year after the Beijing summit in May.</div>
         <div class="meta">
           <a href="https://www.npr.org/2026/09/23/nx-s1-5978733/trump-xi-meeting-china" target="_blank" rel="noopener">阅读原文 →</a>
@@ -334,7 +509,7 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
-        <span class="num">2</span>
+        <span class="num">8</span>
         <span>From cybersecurity to AI to Taiwan, what's at stake in Trump's summit with Xi</span>
         <span class="arrow">▶</span>
       </div>
@@ -347,96 +522,6 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
         </div>
       </div>
     </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">3</span>
-        <span>Trump touts his economy and U.S. actions in Iran in UNGA address</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Trump touts his economy and U.S. actions in Iran in UNGA address</div>
-        <div class="desc">President Trump touted what he portrayed as international and domestic triumphs in a speech to the U.N. General Assembly.</div>
-        <div class="meta">
-          <a href="https://www.npr.org/2026/09/23/nx-s1-5977795/trump-touts-his-economy-and-u-s-actions-in-iran-in-unga-address" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 10:49</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">4</span>
-        <span>DOJ defends White House media ban, urges court to reject lawsuit</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">DOJ defends White House media ban, urges court to reject lawsuit</div>
-        <div class="desc">The Department of Justice defended President Trump's recent media ban, arguing that reporting by CNN, MS Now and Politico on a wide range of issues jeopardized national security and spread falsehoods.</div>
-        <div class="meta">
-          <a href="https://www.npr.org/2026/09/23/nx-s1-5978614/doj-defend-white-house-media-ban" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 09:06</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">5</span>
-        <span>Major news outlets banned by Trump will have their day in court</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Major news outlets banned by Trump will have their day in court</div>
-        <div class="desc">CNN, MS NOW, and Politico are asking a federal judge to hold the president in check for what they say is a violation of their Constitutional rights simply because he doesn't like how they cover him.</div>
-        <div class="meta">
-          <a href="https://www.npr.org/2026/09/23/nx-s1-5978069/cnn-msnow-politico-trump-white-house-ban" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 09:01</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">6</span>
-        <span>There's growing concern that Trump may deploy the National Guard ahead of elections</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">There's growing concern that Trump may deploy the National Guard ahead of elections</div>
-        <div class="desc">Fears are growing that President Trump may deploy the U.S. military to polling places in the upcoming elections, despite strict state and federal laws against such a move.</div>
-        <div class="meta">
-          <a href="https://www.npr.org/2026/09/23/nx-s1-5978015/national-guard-election-military-midterms" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 09:00</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">7</span>
-        <span>As Congress confronts AI, Senate lawmakers are shut off from its most advanced tools</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">As Congress confronts AI, Senate lawmakers are shut off from its most advanced tools</div>
-        <div class="desc">While Senate offices have access to chatbots like ChatGPT, they are not authorized to use any of the more advanced tools that are at the center of regulatory talks and public debate about AI safety.</div>
-        <div class="meta">
-          <a href="https://www.npr.org/2026/09/23/nx-s1-5978055/congress-ai-regulation" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 09:00</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">8</span>
-        <span>Poll: Trust in the U.S. Postal Service delivering mail-in ballots on time has fallen</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Poll: Trust in the U.S. Postal Service delivering mail-in ballots on time has fallen</div>
-        <div class="desc">Registered voters are less confident that USPS will deliver election mail on time compared with 2024, an NPR/PBS News/Marist poll finds, after USPS was part of Trump's bid to limit mail voting.</div>
-        <div class="meta">
-          <a href="https://www.npr.org/2026/09/23/nx-s1-5978081/usps-election-mail-in-ballot" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 09:00</span>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="category" id="cat-1">
     <div class="category-title">🪖 美国军事</div>
@@ -444,6 +529,96 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
+        <span>Italy taps state-owned firms to build two naval destroyers in $4.2 billion deal</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Italy taps state-owned firms to build two naval destroyers in $4.2 billion deal</div>
+        <div class="desc">Italy has signed to buy two new naval destroyers that will mark a quantum leap in capabilities for the Italian navy, the ships’ builders have promised.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/europe/2026/09/24/italy-taps-state-owned-firms-to-build-two-naval-destroyers-in-42-billion-deal/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 16:33</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
+        <span>US to provide critical but more limited capabilities to NATO, top commander says</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">US to provide critical but more limited capabilities to NATO, top commander says</div>
+        <div class="desc">NATO’s top commander said on Thursday the United States would continue to provide “critical but more limited capabilities” to the alliance.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/2026/09/24/us-to-provide-critical-but-more-limited-capabilities-to-nato-top-commander-says/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 16:24</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">3</span>
+        <span>Why the last tactical mile is crucial to acquisition reform</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Why the last tactical mile is crucial to acquisition reform</div>
+        <div class="desc">If acquisition reform is to succeed, it must migrate to the warfighter's last tactical mile, the president and chief executive officer of CNA writes.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/opinion/2026/09/24/why-the-last-tactical-mile-is-crucial-to-acquisition-reform/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 15:49</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">4</span>
+        <span>With Denmark, Saildrone logs first flag registration for naval surveillance drone</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">With Denmark, Saildrone logs first flag registration for naval surveillance drone</div>
+        <div class="desc">U.S. naval drone maker Saildrone seeks to expand its footprint in Europe, with Denmark a key customer in the contested Baltic and North seas.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/europe/2026/09/24/with-denmark-saildrone-logs-first-flag-registration-for-naval-surveillance-drone/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 14:25</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">5</span>
+        <span>Report: CIA warned Europe of Russian drone attack from vessels in the Mediterranean</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Report: CIA warned Europe of Russian drone attack from vessels in the Mediterranean</div>
+        <div class="desc">The CIA reportedly warned European nations of a suspected Russian plot to launch explosive drones from aboard commercial vessels in the Mediterranean.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/global/europe/2026/09/24/report-cia-warned-europe-of-russian-drone-attack-from-vessels-in-the-mediterranean/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 11:19</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">6</span>
+        <span>Army awards Palantir $48.1M to modernize ammo management</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">Army awards Palantir $48.1M to modernize ammo management</div>
+        <div class="desc">The tech company has built AI software designed to process data for targeting and decision-making, and now, managing ammo.</div>
+        <div class="meta">
+          <a href="https://www.defensenews.com/news/your-army/2026/09/24/army-awards-palantir-481m-to-modernize-ammo-management/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 00:37</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">7</span>
         <span>Steam catapults? US Navy appears to be sticking with electromagnetics on carriers</span>
         <span class="arrow">▶</span>
       </div>
@@ -458,7 +633,7 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
-        <span class="num">2</span>
+        <span class="num">8</span>
         <span>Air Force, civilian staff dispute status of China Aerospace Studies Institute</span>
         <span class="arrow">▶</span>
       </div>
@@ -471,96 +646,6 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
         </div>
       </div>
     </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">3</span>
-        <span>Greenland welcomes US military pact but trust still shaky</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Greenland welcomes US military pact but trust still shaky</div>
-        <div class="desc">Greenland’s government and residents expressed relief about a new military pact with the United States and Denmark.</div>
-        <div class="meta">
-          <a href="https://www.defensenews.com/global/europe/2026/09/23/greenland-welcomes-us-military-pact-but-trust-still-shaky/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 15:25</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">4</span>
-        <span>German defense minister sees smooth sailing in parliament for his record defense budget</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">German defense minister sees smooth sailing in parliament for his record defense budget</div>
-        <div class="desc">Pistorius is asking lawmakers to approve nearly €140 billion ($160 billion) for defense next year, a record sum.</div>
-        <div class="meta">
-          <a href="https://www.defensenews.com/global/europe/2026/09/23/german-defense-minister-sees-smooth-sailing-in-parliament-for-his-record-defense-budget/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 13:56</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">5</span>
-        <span>Europe’s push to reduce US reliance is reshaping the defense space market</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Europe’s push to reduce US reliance is reshaping the defense space market</div>
-        <div class="desc">Spooked by U.S. restrictions on satellite data access during recent crises, European countries are scrambling to catch up on sovereign capabilities.</div>
-        <div class="meta">
-          <a href="https://www.defensenews.com/global/europe/2026/09/23/europes-push-to-reduce-us-reliance-is-reshaping-the-defense-space-market/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 13:15</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">6</span>
-        <span>Germany wants to manufacture American PAC-3 interceptors to help meet global demand</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Germany wants to manufacture American PAC-3 interceptors to help meet global demand</div>
-        <div class="desc">German Defense Minister Boris Pistorius has lobbied U.S. defense leaders to allow the production of PAC-3 MSE interceptor missiles in Germany.</div>
-        <div class="meta">
-          <a href="https://www.defensenews.com/global/europe/2026/09/23/germany-wants-to-manufacture-american-pac-3-interceptors-to-help-meet-global-demand/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 12:58</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">7</span>
-        <span>US Navy destroyers tested in Middle East as demands mount</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">US Navy destroyers tested in Middle East as demands mount</div>
-        <div class="desc">The concentration of Navy destroyers in the Middle East raises questions about meeting sustained operational demand.</div>
-        <div class="meta">
-          <a href="https://www.defensenews.com/news/your-navy/2026/09/22/us-navy-destroyers-tested-in-middle-east-as-demands-mount/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-22 18:55</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">8</span>
-        <span>Royal Navy successfully launches US Mk 48 torpedo from uncrewed submersible</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Royal Navy successfully launches US Mk 48 torpedo from uncrewed submersible</div>
-        <div class="desc">Last week, the Royal Navy successfully launched a U.S.-made Mk 48 Heavyweight Torpedo from a British Excalibur uncrewed underwater vehicle.</div>
-        <div class="meta">
-          <a href="https://www.defensenews.com/news/your-military/2026/09/22/royal-navy-successfully-launches-us-mk-48-torpedo-from-uncrewed-submersible/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-22 18:15</span>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="category" id="cat-2">
     <div class="category-title">💰 美国经济</div>
@@ -568,120 +653,120 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Palantir's stock is heading for its highest close of the year, in a dramatic comeback</span>
+        <span>Surging Treasury yields pose a brand new problem for Kevin Warsh and the Fed</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Palantir's stock is heading for its highest close of the year, in a dramatic comeback</div>
-        <div class="desc">Palantir's last earnings report reignited investor enthusiasm, and now the company is basking in the glow of a real-world AI boom.</div>
+        <div class="orig-title">Surging Treasury yields pose a brand new problem for Kevin Warsh and the Fed</div>
+        <div class="desc">Markets expect the central bank will take a firmer hand on inflation. It's not that easy.</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/palantirs-stock-is-heading-for-its-highest-close-of-the-year-in-a-dramatic-comeback-a5fd451d?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:31</span>
+          <a href="https://www.cnbc.com/2026/09/24/surging-treasury-yields-are-posing-a-brand-new-problem-for-kevin-warsh-and-the-fed.html" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:35</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>The ingredients for a financial reckoning are all in place</span>
+        <span>I spend my time and money caring for my aging mother — yet she gave my brother $100,000. Should I pull back?</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">The ingredients for a financial reckoning are all in place</div>
-        <div class="desc">A witch's brew of rising debt levels, higher costs of capital and contagion risks is bubbling.</div>
+        <div class="orig-title">I spend my time and money caring for my aging mother — yet she gave my brother $100,000. Should I pull back?</div>
+        <div class="desc">My mother started having more trouble getting around. First a knee replacement, then a fall.</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/the-ingredients-for-a-financial-reckoning-are-all-in-place-07520a5d?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:24</span>
+          <a href="https://www.marketwatch.com/story/i-spend-my-time-and-money-caring-for-my-aging-mother-yet-she-gave-my-brother-100-000-should-i-pull-back-7e4a3185?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:31</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>This test screens for 50 cancers — but whether Medicare and other health insurers will cover it hinges on FDA approval</span>
+        <span>8% mortgage rates are 'not an impossibility' as the 30-year fixed rate surges</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">This test screens for 50 cancers — but whether Medicare and other health insurers will cover it hinges on FDA approval</div>
-        <div class="desc">Grail's Galleri test looks for 50 cancers from a blood draw, but a major study failed to prove it could detect later-stage cancers.</div>
+        <div class="orig-title">8% mortgage rates are 'not an impossibility' as the 30-year fixed rate surges</div>
+        <div class="desc">With the 10-year Treasury up sharply and the outlook for the U.S. economy looking unclear, some say 8% mortgage rates are back on the table.</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/fda-advisers-are-reviewing-a-multicancer-detection-test-medicare-coverage-could-follow-77cb8817?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:15</span>
+          <a href="https://www.marketwatch.com/story/8-mortgage-rates-are-not-an-impossibility-as-the-30-year-fixed-rate-surges-aa202464?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:29</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">4</span>
-        <span>Businesses are growing at the fastest pace in over four years. Why war and inflation aren't slowing the U.S. economy down.</span>
+        <span>It's no secret that Social Security and Medicare are on the ropes. Here's what to do instead of panicking.</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Businesses are growing at the fastest pace in over four years. Why war and inflation aren't slowing the U.S. economy down.</div>
-        <div class="desc">Expensive gas, higher inflation, a stalemate with Iran and rising interest rates — no matter. The U.S. economy appears to have sped up in the early fall.</div>
+        <div class="orig-title">It's no secret that Social Security and Medicare are on the ropes. Here's what to do instead of panicking.</div>
+        <div class="desc">With midterm elections around the corner, voters are voicing concern about the future of these programs as rising costs imperil household finances</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/businesses-are-growing-at-the-fastest-pace-in-over-four-years-why-war-and-inflation-isnt-slowing-the-u-s-economy-down-2e39e7c7?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:06</span>
+          <a href="https://www.marketwatch.com/story/everyone-knows-social-security-and-medicare-are-on-the-ropes-heres-what-to-do-instead-of-panicking-717ff133?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:24</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>McDonald's is making a historic bet on chicken — and AI — to bring back customers</span>
+        <span>Social Security stopped our checks due to a hacked bank account. We're relying on our church for help. What can we do?</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">McDonald's is making a historic bet on chicken — and AI — to bring back customers</div>
-        <div class="desc">Investors aren't sold on plans to introduce new McNugget flavors, and an analyst recently noted that McDonald's has struggled to break through on chicken-related innovation.</div>
+        <div class="orig-title">Social Security stopped our checks due to a hacked bank account. We're relying on our church for help. What can we do?</div>
+        <div class="desc">We are relying on our church for our current needs.</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/mcdonalds-is-making-a-historic-bet-on-chicken-and-ai-to-bring-back-customers-43468a53?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:02</span>
+          <a href="https://www.marketwatch.com/story/social-security-stopped-our-checks-due-to-a-hacked-bank-account-were-relying-on-our-church-for-help-what-can-we-do-a9464325?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:17</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">6</span>
-        <span>'She says it's just money': My friend pays for everything. I should be grateful, but I can't stand her anymore.</span>
+        <span>Here are 3 alternatives for investors looking to dodge the bond-market beatdown</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">'She says it's just money': My friend pays for everything. I should be grateful, but I can't stand her anymore.</div>
-        <div class="desc">On each of these weekends away, she's probably spending $500.</div>
+        <div class="orig-title">Here are 3 alternatives for investors looking to dodge the bond-market beatdown</div>
+        <div class="desc">U.S. stocks have kept chugging higher this year, but bonds haven't been able to shake off a five-year slump. That has sent some investors interested in a diversified portfolio searching for alternativ</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/she-says-its-just-money-my-friend-pays-for-everything-i-should-be-grateful-but-i-cant-stand-her-anymore-2e7c5c10?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:00</span>
+          <a href="https://www.marketwatch.com/story/here-are-3-alternatives-for-investors-looking-to-dodge-the-bond-market-beatdown-ec8fda43?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:07</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">7</span>
-        <span>Bond yields surge to 5.12% as Wall Street fears more Fed rate hikes</span>
+        <span>A new bill in Congress would lower the retirement age to 60. See who would qualify.</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Bond yields surge to 5.12% as Wall Street fears more Fed rate hikes</div>
-        <div class="desc">Stocks fall, with the Nasdaq and S&amp;P 500 retreating from record territory as bond yields suddenly jump.</div>
+        <div class="orig-title">A new bill in Congress would lower the retirement age to 60. See who would qualify.</div>
+        <div class="desc">A new bill calling for lowering Social Security's full retirement age from 67 to 60 for workers in physically demanding jobs could put additional strain on the trust fund that backs the system and cre</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/bond-yields-surge-as-wall-street-fears-more-potential-federal-reserve-rate-hikes-eabcd3da?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:52</span>
+          <a href="https://www.marketwatch.com/story/a-new-bill-in-congress-would-lower-the-retirement-age-to-60-see-who-would-qualify-10563052?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:47</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">8</span>
-        <span>Fuel prices keep rising — and so do Democrats' chances of winning both the House and Senate</span>
+        <span>'We made a bad, bad decision': I learned the hard way how to manage my aging father's money</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Fuel prices keep rising — and so do Democrats' chances of winning both the House and Senate</div>
-        <div class="desc">Losses for President Donald Trump's Republican Party in the midterms are expected in large part because of voters' frustrations with the elevated cost of living.</div>
+        <div class="orig-title">'We made a bad, bad decision': I learned the hard way how to manage my aging father's money</div>
+        <div class="desc">When my father died, his trust was the Bible.</div>
         <div class="meta">
-          <a href="https://www.marketwatch.com/story/fuel-prices-keep-rising-and-so-do-democrats-chances-for-winning-both-the-house-and-senate-c4541380?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:49</span>
+          <a href="https://www.marketwatch.com/story/we-made-a-bad-bad-decision-i-learned-the-hard-way-how-to-manage-my-aging-fathers-money-c87cabed?mod=mw_rss_topstories" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:15</span>
         </div>
       </div>
     </div>
@@ -692,120 +777,120 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Data centers are black boxes, but California wants to change that</span>
+        <span>Sadly, this $1,549 RTX 5070-equipped gaming PC is a very good deal</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Data centers are black boxes, but California wants to change that</div>
-        <div class="desc">California Gov. Gavin Newsom signed a slate of bills on Monday that could finally give communities better data - and more say - on how data centers impact their electricity bills and water supply. As </div>
+        <div class="orig-title">Sadly, this $1,549 RTX 5070-equipped gaming PC is a very good deal</div>
+        <div class="desc">While PC component prices remain high, you can save a good bit of money on a system by purchasing a prebuilt desktop. Walmart has a well-equipped CyberPowerPC gaming PC on sale for $1,549, almost $600</div>
         <div class="meta">
-          <a href="https://www.theverge.com/policy/999412/data-center-water-electricity-disclosure-bills" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:22</span>
+          <a href="https://www.theverge.com/gadgets/1000122/cyberpowerpc-gaming-prebuilt-rtx-5070-core-i7-asrock-oled-monitor-deal-sale" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:19</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>Disney+ and Hulu add to the growing trend of streaming inflation</span>
+        <span>Oracle sends force majeure notice on its New Mexico Stargate data center</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Disney+ and Hulu add to the growing trend of streaming inflation</div>
-        <div class="desc">At the same time, Disney appears to be exploring new ways to expand its streaming business beyond simply raising subscription prices.</div>
+        <div class="orig-title">Oracle sends force majeure notice on its New Mexico Stargate data center</div>
+        <div class="desc">The notice would allow Oracle to delay payments should the facility miss its 2028 target to come online.</div>
         <div class="meta">
-          <a href="https://techcrunch.com/2026/09/23/disney-and-hulu-add-to-the-growing-trend-of-streaming-inflation/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:06</span>
+          <a href="https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:11</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>The old cybersecurity model is breaking</span>
+        <span>Jensen Huang talks about AI and climate change like a supervillain</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">The old cybersecurity model is breaking</div>
-        <div class="desc">As concern over AI safety and rogue agents continue to make headlines, it’s no surprise that cybersecurity stocks are rising, or that investors are pouring massive amounts of capital into startups try</div>
+        <div class="orig-title">Jensen Huang talks about AI and climate change like a supervillain</div>
+        <div class="desc">As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts &quot;an enormous amount of pain and suffering&quot; first. The Nvidia CEO discussed the future of energy and AI's impact on o</div>
         <div class="meta">
-          <a href="https://techcrunch.com/video/the-old-cybersecurity-model-is-breaking/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:44</span>
+          <a href="https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:04</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">4</span>
-        <span>Zoox grounds Atlanta test fleet after workers report toxic gas exposure symptoms</span>
+        <span>Meta is going to let you build games with AI right on your phone</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Zoox grounds Atlanta test fleet after workers report toxic gas exposure symptoms</div>
-        <div class="desc">The repeated incidents led one worker to file a complaint with the Occupational Safety and Health Administration, which opened an inquiry and told Zoox to investigate the exposures.</div>
+        <div class="orig-title">Meta is going to let you build games with AI right on your phone</div>
+        <div class="desc">Meta has a new plan to get people to make games for its Horizon social platform. The company today announced two new development tools that will let you create games with AI prompts: Horizon Create, a</div>
         <div class="meta">
-          <a href="https://techcrunch.com/2026/09/23/zoox-grounds-atlanta-test-fleet-after-workers-report-toxic-gas-exposure-symptoms/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:28</span>
+          <a href="https://www.theverge.com/games/999972/meta-horizon-create-studio-ai-games" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:52</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>Anthropic's biolab made a discovery it's comparing to Crispr</span>
+        <span>Meta's Muse Charm looks like a Tamagotchi, but it's tapping into a much newer trend</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Anthropic's biolab made a discovery it's comparing to Crispr</div>
-        <div class="desc">Anthropic says its AI Claude has &quot;autonomously discovered&quot; a new enzyme system similar to machinery behind the powerful gene-editing tool Crispr. It's the first result from Anthropic's newly-launched </div>
+        <div class="orig-title">Meta's Muse Charm looks like a Tamagotchi, but it's tapping into a much newer trend</div>
+        <div class="desc">Meta’s new AI gadget may look like a Tamagotchi, but its dangling form factor taps into a much broader Gen Z trend around bag charms, retro tech, and turning gadgets into fashion accessories.</div>
         <div class="meta">
-          <a href="https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:10</span>
+          <a href="https://techcrunch.com/2026/09/24/metas-muse-charm-looks-like-a-tamagotchi-but-its-tapping-into-a-much-newer-trend/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:39</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">6</span>
-        <span>Xbox’s Mythic Achievements sound like PlayStation’s Platinum trophy</span>
+        <span>Muse sure looks a lot like OpenClaw</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Xbox’s Mythic Achievements sound like PlayStation’s Platinum trophy</div>
-        <div class="desc">Xbox appears to be ready to launch its own version of PlayStation's platinum trophies. A new update to the Xbox PC app has revealed Mythic Achievements, which according to data in the app will appear </div>
+        <div class="orig-title">Muse sure looks a lot like OpenClaw</div>
+        <div class="desc">We seem to be entering into an AI agent renaissance. Meta's new consumer-facing AI agent, Muse, topped the App Store charts soon after its release and has 600,000 daily active users in the US, by an A</div>
         <div class="meta">
-          <a href="https://www.theverge.com/news/999404/xbox-mythic-achievement-feature" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:08</span>
+          <a href="https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:31</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">7</span>
-        <span>ChatGPT mobile app gets voice-based agentic features</span>
+        <span>The Xbox reset gets ugly</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">ChatGPT mobile app gets voice-based agentic features</div>
-        <div class="desc">Pro and Plus users will be able to use the Work tab on their phones to complete agentic tasks.</div>
+        <div class="orig-title">The Xbox reset gets ugly</div>
+        <div class="desc">It feels like Xbox has been in a permanent state of turmoil for at least two years now, and this week is no different. Microsoft cut 268 jobs across its gaming division this week, shuffled major studi</div>
         <div class="meta">
-          <a href="https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:00</span>
+          <a href="https://www.theverge.com/tech/999919/microsoft-xbox-reorganization-activision-notepad" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:30</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">8</span>
-        <span>Even Americans who use AI every day are worried about it</span>
+        <span>Muse will apparently let you download its entire filesystem</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Even Americans who use AI every day are worried about it</div>
-        <div class="desc">The report suggests that greater exposure will not resolve the unease around the technology, nor reduce public support for AI regulation.</div>
+        <div class="orig-title">Muse will apparently let you download its entire filesystem</div>
+        <div class="desc">A pair of developers say that with very little prompting, Meta's Muse will share its entire filesystem with you. Peter James and Jonny L. Saunders have said they both independently coaxed Muse into zi</div>
         <div class="meta">
-          <a href="https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 16:49</span>
+          <a href="https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:14</span>
         </div>
       </div>
     </div>
@@ -816,120 +901,120 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Health Canada suspends licence of Grifols site in Winnipeg</span>
+        <span>Belleville, Ont., synagogue shooting was a ‘hate-motivated’ crime, police say</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Health Canada suspends licence of Grifols site in Winnipeg</div>
-        <div class="desc">A 22-year-old donor experienced heart problems at the site and later died</div>
+        <div class="orig-title">Belleville, Ont., synagogue shooting was a ‘hate-motivated’ crime, police say</div>
+        <div class="desc">Shooting during Yom Kippur was ‘a targeted attack against the Jewish community,’ police chief says</div>
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/article-health-canada-suspends-licence-of-grifols-site-in-winnipeg/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:09</span>
+          <a href="https://www.theglobeandmail.com/canada/article-belleville-synagogue-shooting-update-september-24/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:27</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>Iran's president addresses UN General Assembly</span>
+        <span>Boys found ‘healthy and happy’ following alleged July abduction</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Iran's president addresses UN General Assembly</div>
-        <div class="desc">Iran’s president said Wednesday that his people have been 'victims of terrorism' by the United States, delivering a rare wartime speech at the UN General Assembly in New York.</div>
+        <div class="orig-title">Boys found ‘healthy and happy’ following alleged July abduction</div>
+        
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/video-irans-president-addresses-un-general-assembly/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:10</span>
+          <a href="https://www.theglobeandmail.com/canada/article-boys-found-healthy-and-happy-following-alleged-july-abduction/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:01</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>Royal Ontario Museum provides crucial genetic samples for revising bat family tree</span>
+        <span>Nova Scotia government spent nearly $2-billion outside of budget</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Royal Ontario Museum provides crucial genetic samples for revising bat family tree</div>
-        <div class="desc">Global research project suggests bats first arose in Europe some 65 million years ago, coinciding with the abrupt disappearance of dinosaurs</div>
+        <div class="orig-title">Nova Scotia government spent nearly $2-billion outside of budget</div>
+        <div class="desc">Province closed 2025-26 fiscal year with record-high deficit of $1.4-billion, Finance Minister says</div>
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/science/article-royal-ontario-museum-bats-family-tree/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:01</span>
+          <a href="https://www.theglobeandmail.com/canada/article-nova-scotia-budget-finance/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:01</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">4</span>
-        <span>How volunteers fill the gaps in Canada’s health system, according to our experts</span>
+        <span>Bombardier CEO Éric Martel Report on Business Speaker Series</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">How volunteers fill the gaps in Canada’s health system, according to our experts</div>
-        <div class="desc">Readers asked what they can do for their own communities and how the clinics and hospitals can better care for their patients</div>
+        <div class="orig-title">Bombardier CEO Éric Martel Report on Business Speaker Series</div>
+        <div class="desc">Watch live as ROB magazine editor speaks with Martel on the company’s reinvention and the future of Canada’s aerospace and technology sector</div>
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/article-volunteer-health-care-reader-answers/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 16:51</span>
+          <a href="https://www.theglobeandmail.com/business/article-bombardier-ceo-eric-martel-report-on-business-speaker-series/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:50</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>Canada signs international statement on AI safety, joining calls for stronger oversight</span>
+        <span>Many Canadians support Carney’s airport privatization plan, poll finds</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Canada signs international statement on AI safety, joining calls for stronger oversight</div>
-        <div class="desc">Twenty countries issue joint statement during UN General Assembly, even as U.S. rejects any push for regulation</div>
+        <div class="orig-title">Many Canadians support Carney’s airport privatization plan, poll finds</div>
+        <div class="desc">A quarter of survey respondents aren’t sure, with support highest in Quebec and lowest in Saskatchewan and Manitoba</div>
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/article-canada-working-with-partners-on-ai-safety-minister-says/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 16:50</span>
+          <a href="https://www.theglobeandmail.com/business/article-many-canadians-support-carneys-airport-privatization-plan-poll-finds/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:00</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">6</span>
-        <span>Quebec doctors call for inquest into suicides among profession</span>
+        <span>Ontario deficit comes in better than projected at $13-billion</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Quebec doctors call for inquest into suicides among profession</div>
-        <div class="desc">Five doctors in the province reportedly died by suicide over a five-month period this year</div>
+        <div class="orig-title">Ontario deficit comes in better than projected at $13-billion</div>
+        <div class="desc">Province says revenue was higher than expected from government enterprises such as the LCBO</div>
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/article-quebec-doctors-call-for-inquest-into-suicides-among-profession/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 16:35</span>
+          <a href="https://www.theglobeandmail.com/canada/article-ontario-deficit-comes-in-better-than-projected-at-13-billion/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 16:29</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">7</span>
-        <span>Publishers stand by Haitian-Canadian author accused of using AI to write award-winning novel</span>
+        <span>Institutional failures, dismissed warning signs factors in deaths of eight children, report says</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Publishers stand by Haitian-Canadian author accused of using AI to write award-winning novel</div>
-        <div class="desc">Origins of Thelyson Orelien’s C’était ça ou mourir have sparked a debate about race, literary merit and originality in the French literary world</div>
+        <div class="orig-title">Institutional failures, dismissed warning signs factors in deaths of eight children, report says</div>
+        <div class="desc">Report Thursday analyzed the deaths of eight children in five different cases</div>
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/article-haitian-canadian-author-thelyson-orelien-accused-of-using-ai/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 16:20</span>
+          <a href="https://www.theglobeandmail.com/canada/article-institutional-failures-warning-signs-deaths-of-eight-children-report/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 15:03</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">8</span>
-        <span>Canada ratifies landmark High Seas Treaty, commits $82-million to ocean protection</span>
+        <span>Scientist Jim Bruce was a globally renowned voice on the dangers of climate change</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Canada ratifies landmark High Seas Treaty, commits $82-million to ocean protection</div>
-        <div class="desc">Funding will support Arctic Ocean monitoring, underwater research and expanded efforts to track effects of climate change</div>
+        <div class="orig-title">Scientist Jim Bruce was a globally renowned voice on the dangers of climate change</div>
+        <div class="desc">A founding member of the Intergovernmental Panel on Climate Change, he was the only Canadian representative in the delegation that accepted the 2007 Nobel Peace Prize jointly with former U.S. vice-pre</div>
         <div class="meta">
-          <a href="https://www.theglobeandmail.com/canada/article-canada-ratifies-landmark-high-seas-treaty-commits-82-million-to-ocean/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 15:58</span>
+          <a href="https://www.theglobeandmail.com/canada/article-jim-bruce-ipcc-obituary/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 14:09</span>
         </div>
       </div>
     </div>
@@ -940,120 +1025,120 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Summerland Sauce Project: What’s in the Harvest recipe</span>
+        <span>Montreal fashion brand finds fans including Meghan Markle and Taylor Swift</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Summerland Sauce Project: What’s in the Harvest recipe</div>
-        <div class="desc">The versatile sauce, which features tomatoes, eggplant, zucchini, peppers and basil, is a 'sauce of many possibilities,' according to Bell</div>
+        <div class="orig-title">Montreal fashion brand finds fans including Meghan Markle and Taylor Swift</div>
+        <div class="desc">Throughout its 22-year history, Soia  Kyo has racked up a big following of famous fashion fans for its wares.</div>
         <div class="meta">
-          <a href="https://vancouversun.com/life/summerland-sauce-project-whats-in-the-harvest-recipe" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:00</span>
+          <a href="https://vancouversun.com/life/montreal-fashion-brand-finds-fans-including-meghan-markle-and-taylor-swift" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:00</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>Juliet gives Shakespeare’s heroine a second chance — with a little help from Max Martin</span>
+        <span>These are the 3 best beauty products we tried this week. Heres why</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Juliet gives Shakespeare’s heroine a second chance — with a little help from Max Martin</div>
-        <div class="desc">Juliet, at Vancouver's Queen Elizabeth Theatre, is jukebox musical stacked with chart-toppers from one-man Swedish hit factory Max Martin.</div>
+        <div class="orig-title">These are the 3 best beauty products we tried this week. Heres why</div>
+        <div class="desc">Beauty Buzz: The 3 best beauty products we tried this week from Rhode, Hermes and Dermalogica.</div>
         <div class="meta">
-          <a href="https://vancouversun.com/entertainment/juliet-gives-shakespeares-heroine-a-second-chance-with-a-little-help-from-max-martin" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:00</span>
+          <a href="https://vancouversun.com/life/fashion-beauty/product-reviews-rhode-dermalogica-rouge-hermes" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:00</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>Surrey filmmaker puts Sikh athletes in the spotlight at International South Asian Film Festival</span>
+        <span>The Improv Centre celebrates 45 years of spontaneous Vancouver fun</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Surrey filmmaker puts Sikh athletes in the spotlight at International South Asian Film Festival</div>
-        <div class="desc">Crowned Athletes is one of two short films that Prabhjit Singh Sabharwal has in this year’s International South Asian Film Festival</div>
+        <div class="orig-title">The Improv Centre celebrates 45 years of spontaneous Vancouver fun</div>
+        <div class="desc">With no two performances ever the same, you can never know what to expect of an evening.</div>
         <div class="meta">
-          <a href="https://vancouversun.com/entertainment/international-south-asian-film-festival-2026-crowned-athletes-parontha" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:00</span>
+          <a href="https://vancouversun.com/entertainment/the-improv-centre-celebrates-45-years-of-spontaneous-vancouver-fun" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:00</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">4</span>
-        <span>Meet the B.C. chef set to battle it out on Top Chef Canada</span>
+        <span>Explainer: Parties running in B.C.s October provincial election</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Meet the B.C. chef set to battle it out on Top Chef Canada</div>
-        <div class="desc">Teetl’it Gwich’in chef Stephanie Baryluk has been named to the cast of Canadian chefs who will be heating up the competition</div>
+        <div class="orig-title">Explainer: Parties running in B.C.s October provincial election</div>
+        <div class="desc">An updated look at the parties running in the B.C. provincial election</div>
         <div class="meta">
-          <a href="https://vancouversun.com/life/food/bc-chef-battle-top-chef-canada" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:44</span>
+          <a href="https://vancouversun.com/news/explainer-parties-running-october-bc-election" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 16:46</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>Shōgun stars spotted dining at Vancouvers Nui restaurant</span>
+        <span>Sold (Bought): Townhome in Burnabys Crest subdivision offers greenbelt setting</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Shōgun stars spotted dining at Vancouvers Nui restaurant</div>
-        <div class="desc">Finalist for Air Canada's best new restaurant list welcomes Masataka Kubota and Asami Mizukawa just days after Shōgun wraps shooting season 2 in Vancouver</div>
+        <div class="orig-title">Sold (Bought): Townhome in Burnabys Crest subdivision offers greenbelt setting</div>
+        <div class="desc">Three-storey home was updated in 2021 with permits and features a remodelled kitchen</div>
         <div class="meta">
-          <a href="https://vancouversun.com/entertainment/shogun-stars-dining-vancouver-nui-restaurant" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 15:56</span>
+          <a href="https://vancouversun.com/homes/greenbelt-setting-townhome-in-burnabys-crest-subdivision" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 16:30</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">6</span>
-        <span>Historic building with stone facade torn down on Vancouvers Main Street</span>
+        <span>Raise-a-Reader Collingwood Neighbourhood House needs your help</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Historic building with stone facade torn down on Vancouvers Main Street</div>
-        <div class="desc">The White Block was built in 1903, when Main Street was called Westminster Avenue</div>
+        <div class="orig-title">Raise-a-Reader Collingwood Neighbourhood House needs your help</div>
+        <div class="desc">The Literacy Circle introduced the creative world of contemporary artist Yayoi Kusama, and let the kids do the talking.</div>
         <div class="meta">
-          <a href="https://vancouversun.com/business/real-estate/historic-building-stone-facade-torn-down-main-street-vancouver" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 13:00</span>
+          <a href="https://vancouversun.com/news/raise-a-reader-collingwood-neighbourhood-house" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 14:00</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">7</span>
-        <span>Douglas Todd: Canada’s rent control debate thunders on</span>
+        <span>Vancouver student fights back after wildfire smoke causes health issues</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Douglas Todd: Canada’s rent control debate thunders on</div>
-        <div class="desc">Even though some form of rent control has been in place in B.C. for 50 years, the issue is not over — especially elsewhere. Two opponents make their arguments. Is compromise possible?</div>
+        <div class="orig-title">Vancouver student fights back after wildfire smoke causes health issues</div>
+        <div class="desc">Zoe Grames-Webb joined a youth climate lawsuit in 2019 at age 13. Now it's going to trial seven years later in Vancouver</div>
         <div class="meta">
-          <a href="https://vancouversun.com/opinion/columnists/douglas-todd-canada-rent-control-debate" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 13:00</span>
+          <a href="https://vancouversun.com/news/vancouver-student-fights-back-after-wildfire-smoke-causes-health-issues" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 14:00</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">8</span>
-        <span>Raise-A-Reader: Building a love of reading, one Saturday at a time</span>
+        <span>Overdose prevention site planned for new St. Pauls Hospital — but government mum on details</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Raise-A-Reader: Building a love of reading, one Saturday at a time</div>
-        <div class="desc">The eight-week literacy program gives kindergarten children and their caregivers time to read, create, connect and learn together.</div>
+        <div class="orig-title">Overdose prevention site planned for new St. Pauls Hospital — but government mum on details</div>
+        <div class="desc">Providence Health Care is inviting bids to convert the new hospital's roof into a 'semi-conditioned, exterior overdose prevention site'</div>
         <div class="meta">
-          <a href="https://vancouversun.com/news/raise-a-reader-building-a-love-of-reading-one-saturday-at-a-time" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 13:00</span>
+          <a href="https://vancouversun.com/news/overdose-prevention-site-planned-for-new-st-pauls-hospital-vancouver-bc-government-mum-on-details" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 13:00</span>
         </div>
       </div>
     </div>
@@ -1064,120 +1149,45 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Police identify body found in burning field as that of Richmond, B.C., woman - castanet.net</span>
+        <span>Richmond RCMP arrests 21, recovers $5.6K in stolen goods - Richmond News</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Police identify body found in burning field as that of Richmond, B.C., woman - castanet.net</div>
-        <div class="desc">Police identify body found in burning field as that of Richmond, B.C., woman&amp;nbsp;&amp;nbsp;castanet.net</div>
+        <div class="orig-title">Richmond RCMP arrests 21, recovers $5.6K in stolen goods - Richmond News</div>
+        <div class="desc">Richmond RCMP arrests 21, recovers $5.6K in stolen goods&amp;nbsp;&amp;nbsp;Richmond News</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQdjBSRm13LWdtdkxFdWQ5dHlibXZqU3lTemFTRmM0ckRVaHVpUGhBa3BNcDREOWJjYTlsS3hRXzBzUUYtdUhZMFhRWDNQNVM2V1N1NVlGNjA0Zkh1WU5mcUxHM1cxc0FiVi0tTzVYMC1Zak9ObjFjMTFRUVlwdUlZaFFCb2Jhdnp6MmtGb0loZ19pODlzN2NSVlNkTkdPdXBwV0lwWUEtdnVndmExWXdPQjZtVkFISjRNQkZMMWdwVkgtN2wz?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 17:43</span>
+          <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTm54eEFWZG5kT2plbzRxOHNKdUE4RGxscGVpMnRyOVJyMGZXS3RmM3JlRlBGLW1xRlQzY2JRdWZxSDdvTHJZaW42NHVjTUljTkdyX0pHMzdRUG1oVGdJbUw1UGpfS1psZGp0RjI0OVQ2dVdfVkxXbzdJR09qT3I1S24yZUl2Sk1sUkRmd0VHNnYzbGFSNHIwNk1jZ09rSm9HTXpBVGxCQ0wwUQ?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 16:15</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>Rob Shaw: Eby can't conjure a convincing reason to call snap election - Richmond News</span>
+        <span>A Toronto Chinese restaurant was just named the best in Canada - blogTO</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Rob Shaw: Eby can't conjure a convincing reason to call snap election - Richmond News</div>
-        <div class="desc">Rob Shaw: Eby can't conjure a convincing reason to call snap election&amp;nbsp;&amp;nbsp;Richmond News</div>
+        <div class="orig-title">A Toronto Chinese restaurant was just named the best in Canada - blogTO</div>
+        <div class="desc">A Toronto Chinese restaurant was just named the best in Canada&amp;nbsp;&amp;nbsp;blogTO</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQZ0wycFhJSk1jUG9oTzhPbVFYbFhFR1RvWTlSYVJkQXhKYmxsZGJHSldoLVJvUkRVVG9vX2dwejAyV3Njd25ET3kzbEFBUC1KNUQ2ZzVOSU53ZUJQZ1hiR0VQNzhKeExsNGV4eFBja0ZXQXIwWE55a0YtSTRjTVBkd0I1Vk5WZjJoVjA1UU9pYnhnNzF3cTNkbFpLWExibDdJQTE2SDFTUEpTVDRkZ3pESFBsdzlnNHc0dElxdE0tbzlfY2pIdGc?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 15:00</span>
+          <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOcXBuVjNJZm5aRXhVLTVoSi1SY29EVENZYkp4ZUdsb0dVTzlYek1xMGU3dW1ydXExWEFwMjF1ZDlyWTd5WkZJa0Z3Y1lwQWlvMGJSbjlBS0ZXZS1pOW1wMjNGVVhrMmhjbWlJQ21sUkliTXdoZDB6d0pFcFdtYXdqMmJzM2xHUjFQUWhLUGVkUQ?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 14:39</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>How a Richmond resident is building community one dish at a time - CBC</span>
+        <span>Police identify body found in burning field as that of Richmond, B.C., woman - CHEK News</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">How a Richmond resident is building community one dish at a time - CBC</div>
-        <div class="desc">How a Richmond resident is building community one dish at a time&amp;nbsp;&amp;nbsp;CBC</div>
+        <div class="orig-title">Police identify body found in burning field as that of Richmond, B.C., woman - CHEK News</div>
+        <div class="desc">Police identify body found in burning field as that of Richmond, B.C., woman&amp;nbsp;&amp;nbsp;CHEK News</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFB4ZmJhdV9xVTZiX1otQTU1enV2RFFvM19TRHY1UEExMGZ5dFRXR2lnM2dkbEVCcVoxa0xWemlhRlZ2ak1GMllzaDZJTHdVbmJxUzN4WVZ5RmpkQQ?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 02:45</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">4</span>
-        <span>Commercial building on fire in Richmond's Bridgeport area - Richmond News</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Commercial building on fire in Richmond's Bridgeport area - Richmond News</div>
-        <div class="desc">Commercial building on fire in Richmond's Bridgeport area&amp;nbsp;&amp;nbsp;Richmond News</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaThtWFg0ZUNBa0ZYTXU1Tms1NHZmOUNjR0Z0ZV9BcUpqaGFwemowZTlzZURqajZzNUhOMEFBalZtSEFVaGhTU0RBZnYycHUxRzNHZjZQZUczN055RUx5V1lvZWhlLVZkQ1ZLOVZxUGRjWENOd0s5REpqNzZoZklFRWRlYlpLcWZGUnFETEFZQkozQ2RhYW1hejd1azFhQUtNM0xNY2ZHRXM?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 01:06</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">5</span>
-        <span>Richmond plants its 11th Miyawaki forest at McLean Park - Richmond News</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Richmond plants its 11th Miyawaki forest at McLean Park - Richmond News</div>
-        <div class="desc">Richmond plants its 11th Miyawaki forest at McLean Park&amp;nbsp;&amp;nbsp;Richmond News</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNb1JFWkFsV21MRmF3VWdGMjIxVHk1eF9hMGpLam1ndzJ1WFYzQ0dyU1kwTDdNRk1XMmlsYTJuT0kzQnlFMDRaR2hpdDlNNk1LM1pKcXVXZEZJcnl3UzZaTjI3bUhQZFI2WXVIUldka0tHaF9pOTBGUGpiUVhTcUNxbFd6dmRyV2x4dFdHOHBnZXc5eng5SGxpdU1wNFczdFYyQkNtNjZ5bFl0OUQyX21RbA?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-22 23:30</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">6</span>
-        <span>Two-term Richmond-Steveston MLA won't run in Oct. 24 election - Richmond News</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Two-term Richmond-Steveston MLA won't run in Oct. 24 election - Richmond News</div>
-        <div class="desc">Two-term Richmond-Steveston MLA won't run in Oct. 24 election&amp;nbsp;&amp;nbsp;Richmond News</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPY1RGVU55ZUc1SHozY3JsOF92TmFNbk55d0FxbE5fUG5iS0xXUlhmMnBobU5fVnd4NC1Ja2ZmWTlNVlYwTjA1WTVRSW5aU0ZVZFVJRU0tQU9wTEk5a2oyOUZBUFRZbzlMM2FGRndUejdPQmNPR1IwTm1WZEtULUNaalNpWEZvb19ibE9vRFA3M3RYNFRHU2J0cUZuS09Nd1hNS01qVHBCS1oxR1Atd0I1YUNNc0NhVTQ?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-22 22:32</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">7</span>
-        <span>Broken rotor blade caused WestJet fire, forced landing in Kelowna, B.C.: safety board - castanet.net</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">Broken rotor blade caused WestJet fire, forced landing in Kelowna, B.C.: safety board - castanet.net</div>
-        <div class="desc">Broken rotor blade caused WestJet fire, forced landing in Kelowna, B.C.: safety board&amp;nbsp;&amp;nbsp;castanet.net</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVFdxTl95UHg1S19VNzlSR2JMT1g1dWV3MnUzRDJrb0Z6dTBiZDBZWTRYdGhQaEwtU0t6TDl2Rl9oc3RJOFZFa3pMVVhrVFJVZHdiM05NdDMwNlhYb2ZrbERLX3pRRFN1dDdNS1ZIY0Y3dmFkYjZyWWQyYV9HSHl4QXZtSnJ0czVuWVhqQ2p4OHVnb2xJUy1aQkZ2cGtjM0pSbkVhcWZ4Tm5aY1FCYzVZdnJnYkNEQl9wZmtCTk85WDlBbFAy?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-22 18:38</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">8</span>
-        <span>'I'm very grateful': Richmond resident wins $500K in Daily Grand draw - Richmond News</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">'I'm very grateful': Richmond resident wins $500K in Daily Grand draw - Richmond News</div>
-        <div class="desc">'I'm very grateful': Richmond resident wins $500K in Daily Grand draw&amp;nbsp;&amp;nbsp;Richmond News</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPTDBVOEpQaVRLZkJBQ2tRY0FHTnJWYkx4UXctb3hEaUJMQVRjQkJpaWNJYnZjcmlMNDJ4eENEdWdIdXZyR2w3bE1MX2xaQ2FOVndSTmdSWFpTVXczQTJsMG82dXpsSVF5YVJHTl84WTl5eDRfZzUtN0RCTGVuU2dObmJfUE5nYTBXWVh5bk5DbHNOWGNHOUgzWHlJVEtKVkN3N0lUb2pubXY4alR6N181bzlR?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-22 17:52</span>
+          <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQYjNQZkM0TlBOb1lUUVV5RVBYRU1CQVhxRGRPQUNlN2xwTVU1aHlpNXp4VERZdGZIM1I0QXJya2lFWEZDTC1IVmg3RXdDM0thLXVYRWkxdVpzSEdoTVpsRkRXVmxPMERoRzFGdHNmNWRVdXdJTmxmWUVabEZFTXNwVnoyR1J3VS14SG4tRXhJWU5aQzBSNU9lelhndnNncXViSlRuMg?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-23 21:50</span>
         </div>
       </div>
     </div>
@@ -1188,120 +1198,120 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>今夜，十余只热门股密集提示风险 - 新浪财经</span>
+        <span>“924行情”两周年A股没有奇迹，市场人气降至今年冰点，百亿股仅剩中际旭创、新易盛，专家称牛市大概���不会结束，是带动消费的重要方式 - 金融界</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">今夜，十余只热门股密集提示风险 - 新浪财经</div>
-        <div class="desc">今夜，十余只热门股密集提示风险&amp;nbsp;&amp;nbsp;新浪财经</div>
+        <div class="orig-title">“924行情”两周年A股没有奇迹，市场人气降至今年冰点，百亿股仅剩中际旭创、新易盛，专家称牛市大概���不会结束，是带动消费的重要方式 - 金融界</div>
+        <div class="desc">“924行情”两周年A股没有奇迹，市场人气降至今年冰点，百亿股仅剩中际旭创、新易盛，专家称牛市大概率不会结束，是带动消费的重要方式&amp;nbsp;&amp;nbsp;金融界</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE94LW9aM01iUHhLbFFoMHctbG1oMnNJYVppNi1VUGxkd1FOV2lZdGFoUnZSRGxVaU9aaUJPQUNuX2FpbXJJcUkzUGFGTEZleEQ0MjNNS1BSU3liQ2hzeF8yNGJlV0ZPa1drdTdJSU51TkRnVmYzUFgzWA?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 15:02</span>
+          <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5zajktSkVFVVVJMDNUajJuX1pTamluMk81TTAxOVpzSGFFcmlyNFQ1RU5odmt0cmppenpPRzBvaGc5YUFBa21YXzhOYjc4SW1LcVVsUnFhSm55N283VmVzeW5BdzFqLWdxQThLN2Q3MGxsZw?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 12:23</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>东星医疗2000万元试水，A股药企掀起脑机接口热 - 新浪财经</span>
+        <span>中报窗口下A股科技主线与投顾合规观察 - finance.sina.com.cn</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">东星医疗2000万元试水，A股药企掀起脑机接口热 - 新浪财经</div>
-        <div class="desc">东星医疗2000万元试水，A股药企掀起脑机接口热&amp;nbsp;&amp;nbsp;新浪财经</div>
+        <div class="orig-title">中报窗口下A股科技主线与投顾合规观察 - finance.sina.com.cn</div>
+        <div class="desc">中报窗���下A股科技主线与投顾合规观察&amp;nbsp;&amp;nbsp;finance.sina.com.cn</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5qRm1QeGtadzh2X2hMSFVDR3JpRUwyNlFvUzU3bUhCZFltTXdYODdNNkdVOG1fLXVBOEV0ZE1qdHVIbHR1d2VLenhhbUQyYm1SVHlHU2tJZmplOHZ1OVRYVEc3cGl0bjhzemszNUtiajVYckZpU0ZaYQ?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 14:06</span>
+          <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQU1U2Y3FxaHVOamRvbkxvVDJqaHFmb3g0eU1iN2Z4bUZqUF9DWTRuU2hIZnN6TFRGamg3NGg0aV93QklFLTFIdm5haW84NHZqNjdmZWV6UDIyQlF5MnZGaVFjOHQ4dnJ2NlRrUFlzd1NkMC1MVUo2akJxU2tTRnhEcTVvdDg2Zy1icXc?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 10:15</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>603328，封死涨停！供需偏紧，铜板块5股绩优低估值 - 同花顺</span>
+        <span>每日看盘｜全球股债商“三杀”，大金融行业成A股“压舱石” - thepaper.cn</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">603328，封死涨停！供需偏紧，铜板块5股绩优低估值 - 同花顺</div>
-        <div class="desc">603328，封死涨停！供需偏紧，铜板块5股绩优低估值&amp;nbsp;&amp;nbsp;同花顺</div>
+        <div class="orig-title">每日看盘｜全球股债商“三杀”，大金融行业成A股“压舱石” - thepaper.cn</div>
+        <div class="desc">每日看盘｜全球股债商“三杀”，大金融行业成A股“压舱石”&amp;nbsp;&amp;nbsp;thepaper.cn</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5qUVh1U0puQ19WekpFTEZxNE1EWldaYjF5Uk12VU83S2N3ZkVqa3JVMHVUZldNTVpISElFWVJfcEUwOEVZTGhwa245Q1AzUGJQSzVJUUtJanVyTmVZTFlXSFZ3?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 13:01</span>
+          <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5aYmxLc1ZkaWxuaUp5ZFFVVnEzVGJ5RkVwWWtpTFhLS1J2a1VqSEZzajIxTjJJTTlhS2NxdXNFZzZZSHhKc2l5U0ZpdHo3ZUxXLXVSR1BWWUtHRExZVG5iMA?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 10:06</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">4</span>
-        <span>妻子起诉离婚，要求分割财产！昆明巨富何祖训遭遇婚变，旗下A股公司市值超170亿元 - 新浪财经</span>
+        <span>Two Years After China's &quot;924&quot; Stimulus: A-Share Market Cap Surges Over 51 Trillion Yuan, Yet 47% of Stocks Lag the Index - finance.biggo.com</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">妻子起诉离婚，要求分割财产！昆明巨富何祖训遭遇婚变，旗下A股公司市值超170亿元 - 新浪财经</div>
-        <div class="desc">妻子起诉离婚，要求分割财产！昆明巨富何祖训遭遇婚变，旗下A股公司市值超170亿元&amp;nbsp;&amp;nbsp;新浪财经</div>
+        <div class="orig-title">Two Years After China's &quot;924&quot; Stimulus: A-Share Market Cap Surges Over 51 Trillion Yuan, Yet 47% of Stocks Lag the Index - finance.biggo.com</div>
+        <div class="desc">Two Years After China's &quot;924&quot; Stimulus: A-Share Market Cap Surges Over 51 Trillion Yuan, Yet 47% of Stocks Lag the Index&amp;nbsp;&amp;nbsp;finance.biggo.com</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMUxsdkw3Z2ctQnZYTlFLTDl4ZEs2TDQzVjNoQm5tc3BuMVNTWUI4YUpyeklzZE5YdnQ4aV8ySS12SEtPeE9yenlEMHVCX2NtT0VJY09TNy11cnpzUkRLREdUT0IwVl80eDZZNEUwUzdEbXRSMFptNFBHOXRabDh0T0dNdDNJaVEwY0I1eDdaVUlmUmRwQ3RpOWFMTVExSUEzUFAxYnhaektUa2RTeWR6UjdVdDkzV2VmMnJVNzFCMVg3eWRjSVZzaEtXZkFuMGo2?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 13:00</span>
+          <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1DMUVqY0J4dS04VU82NHV1TTV2a0s3QWdXUjhRMzNaQlUzM09ERmJWMHFKdWsycW9Ha2tBd0pyQWFsMVFTQ21rYTVzbDJkQ2RnVzNXOWZKRXp4ckk0R3g3b0Q0U3lLNy1lTzY1cmxhWjlnZUFmOGc?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:55</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>市场缩量震荡，多只医药主题基金涨逾3% - 新浪财经</span>
+        <span>A股低开低走，沪指失守3900点，超4300只个股下跌！福建板块突然拉升，多股涨停；地产震荡调整，华丽家族跌停｜A股收盘 - mrjjxw.com</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">市场缩量震荡，多只医药主题基金涨逾3% - 新浪财经</div>
-        <div class="desc">市场缩量震荡，多只医药主题基金涨逾3%&amp;nbsp;&amp;nbsp;新浪财经</div>
+        <div class="orig-title">A股低开低走，沪指失守3900点，超4300只个股下跌！福建板块突然拉升，多股涨停；地产震荡调整，华丽家族跌停｜A股收盘 - mrjjxw.com</div>
+        <div class="desc">A股低开低走，沪指失守3900点，超4300只个股下跌！福建板块突然拉升，多股涨停；地产震荡调整，华丽家族跌停｜A股收盘&amp;nbsp;&amp;nbsp;mrjjxw.com</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFBYc09TN1piczVpRmVXUHFpTlJnUGZ1cnl3Z0JRR2hBUTVxS21oUXFlZ3NHN2prWENpZTZLTlo4ZDBtaTdyQXkzSW1rYzMzMzJyRFBWS0xDYldDLXMtY0lsZDFDSGk1ZXlybWZ0aHFvMTdiY292Tk8xRA?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 12:57</span>
+          <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1UdDg0Rnc3OUV6YWF0Tk4weFQtSjNWWG04UGdKVWVBLTdDb0hodUhNaHYtbm9mck5VN1V0MjdsbGhjNm1GckM5dkFVeWFGUUV3S1VBSmhBcHY4WXRwS3VWb1hNTi0wdw?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:31</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">6</span>
-        <span>A股牛熊的核心不在经济 - 手机新浪网</span>
+        <span>这一板块，午后放量上攻！300300涨停，主力大举买入�� - 同花顺财经</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">A股牛熊的核心不在经济 - 手机新浪网</div>
-        <div class="desc">A股牛熊的核心不在经济&amp;nbsp;&amp;nbsp;手机新浪网</div>
+        <div class="orig-title">这一板块，午后放量上攻！300300涨停，主力大举买入�� - 同花顺财经</div>
+        <div class="desc">这一板块，午后放量上攻！300300涨停，主力大举买入！&amp;nbsp;&amp;nbsp;同花顺财经</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1BN3VEd2IzNGFNM01KQ1J4bi05Tk5XYkVPalRiaWcyNjRUeGFwNF9DNjlkZ2lIQTByTUhtWGQwMHV4dEk3V2xrUEJwR3VyX2VxLUhmTzYyN1JLNGtpV1pRZFU3WW1ubUhTOE9XUERtdDZjdw?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 11:08</span>
+          <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfRDNfVlNtRVE3VjJsNnU5MFNIblp1VS1TZk5ZQlFnU0xkUFVYTEFSdTZ0Y0J6dEVmZGh3Q3FyNlF5SFZaeDNqVk5Wc291WF9mUmxxdWVPeXpjNnN5cG0xYg?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:28</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">7</span>
-        <span>0923股市大家谈 - 第一财经</span>
+        <span>亚太股市涨跌不一，韩国KOSPI指数涨0.9%，日经225指数涨0.76%，国企指数跌0.09%-电报君 - 金融界</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">0923股市大家谈 - 第一财经</div>
-        <div class="desc">0923股市大家谈&amp;nbsp;&amp;nbsp;第一财经</div>
+        <div class="orig-title">亚太股市涨跌不一，韩国KOSPI指数涨0.9%，日经225指数涨0.76%，国企指数跌0.09%-电报君 - 金融界</div>
+        <div class="desc">亚太股市涨跌不一，韩国KOSPI指数涨0.9%，日经225指数涨0.76%，国企指数跌0.09%-电报君&amp;nbsp;&amp;nbsp;金融界</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE0zdWgtaEkwWVFXblFzMFhfcnFKbEJ6dkZJVzJYNUFacXphZDVINUxVUkpiaTVldlJkUEpzUDNOYWN4Y1VtUFRTYVZxdTQyemVrU1hONg?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 10:08</span>
+          <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE95a2JWNkcyc2ZsYW9YR3IzbWpTU2Eyd1B0V1d6ZHlzd1JzTWs3Y1hxVmQ2UVB3WmJrLTM3NkgxakpJUlVaa3Jnd2RjckxKVEktdk1TdjM2Vl90TkItR0pYRkRYU2RBRUNsTEUzcklDMG81NzdC?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:16</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">8</span>
-        <span>缩量3700亿元！A股节前“下蹲”，机构判断节后行情→ - 新浪财经</span>
+        <span>A股三大指数收跌 成交额不足1.7万亿 风电板块逆市走强 - yicai.com</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">缩量3700亿元！A股节前“下蹲”，机构判断节后行情→ - 新浪财经</div>
-        <div class="desc">缩量3700亿元！A股节前“下蹲”，机构判断节后行情→&amp;nbsp;&amp;nbsp;新浪财经</div>
+        <div class="orig-title">A股三大指数收跌 成交额不足1.7万亿 风电板块逆市走强 - yicai.com</div>
+        <div class="desc">A股三大指数收跌 成交额不足1.7万亿 风电板块逆市走强&amp;nbsp;&amp;nbsp;yicai.com</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQYzBrQjZ4ajV0ZkxZRnhvVmxaclVsY2E0aGlKN3B5REVicU55ODllcS1mWjIzVHpKanFRSVg4X0pDWmk0ZjhoeUhOXy10aFFsOUx4T21LdmZ5M0p1V3BQUjROdVg3YWU4cERmMjVBOXJhZXJSOUEyT2ppZW5jTDNGWg?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 09:18</span>
+          <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBXLUczR2RCcUpWa1JydWZVQkxMTEgtQ3BudUM1Rmh1VHo0UnV6TXN4eWFyZG1SY0FqMG5CTGU1YTFtcUVUdnJKRWswNGM4VVRPRnNxOA?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 09:05</span>
         </div>
       </div>
     </div>
@@ -1312,120 +1322,120 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Morgan Stanley Sees a 33-GW AI Power Shortfall. These 2 Stocks Could Help Fill It</span>
+        <span>Stock Market Today: Dow Pressured By Rising Oil, Yields; AI Data Center Name Falls (Live Coverage)</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Morgan Stanley Sees a 33-GW AI Power Shortfall. These 2 Stocks Could Help Fill It</div>
-        <div class="desc">Morgan Stanley has put a number on one of the AI boom’s most awkward constraints: the United States could face a roughly 33-gigawatt power shortfall through 2028 even after accounting for onsite gener</div>
+        <div class="orig-title">Stock Market Today: Dow Pressured By Rising Oil, Yields; AI Data Center Name Falls (Live Coverage)</div>
+        <div class="desc">Stock Market Today: The Dow Jones index drops Thursday on rising Treasury yields. Nvidia stock sold off in morning trading.</div>
         <div class="meta">
-          <a href="https://finance.yahoo.com/energy/articles/morgan-stanley-sees-33-gw-184007932.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:40</span>
+          <a href="https://finance.yahoo.com/m/a54a90ad-a14d-3ff8-9f09-e455a0eca8cf/stock-market-today%3A-dow.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:36</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>S&amp;P500 and Nasdaq Index: Hot PMI Sends 10-Year Yield Above 5% and Stocks Lower - FXEmpire</span>
+        <span>Is Realty Income's Nearly 6% Yield a Bargain or a Trap?</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">S&amp;P500 and Nasdaq Index: Hot PMI Sends 10-Year Yield Above 5% and Stocks Lower - FXEmpire</div>
-        <div class="desc">S&amp;P500 and Nasdaq Index: Hot PMI Sends 10-Year Yield Above 5% and Stocks Lower&amp;nbsp;&amp;nbsp;FXEmpire</div>
+        <div class="orig-title">Is Realty Income's Nearly 6% Yield a Bargain or a Trap?</div>
+        <div class="desc">Realty Income's yield has risen sharply over the past month.</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQck4xUTJnU2k1a2xoYkpobU81M1A0ZXIwbXNMNS1EMG1RR1FXSDdyU09hZUlGczZFRndvci1qZVY2TENUUkRQUDVHTjVHR3J4dE1kQUlJT0FQZGxFWVZKMkgxZWJFa3BMV29MTmY3d1oyRGNDRE9LTjMxUVAyRmRIRnR2VGh1dERWLXhMbGhSQ1E4Y2dpaUlGMXZQRHpvM05XRzBhblRFTTBGc1V5UVVNU2trQ1JneU5TS1NWeVMxT0RMUWc3?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:37</span>
+          <a href="https://www.fool.com/investing/2026/09/24/is-realty-income-s-nearly-6-yield-a-bargain-or-a-trap/?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:35</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>Stock Market Today; Small Caps Slapped, Biotech ETF Hit; Argenx Faces Test At 50-Day Average (Live Coverage)</span>
+        <span>S&amp;P 500, Dow, Nasdaq Drop As Yields Spike Amid Calls For More Rate Hikes — AMZN, GOOGL, NFLX, SPCX, RKLB In Focus - Stocktwits</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Stock Market Today; Small Caps Slapped, Biotech ETF Hit; Argenx Faces Test At 50-Day Average (Live Coverage)</div>
-        <div class="desc">Stock Market Today: The Dow Jones index falls Wednesday after the Nasdaq set new highs Tuesday. Micron and Sandisk drop.</div>
+        <div class="orig-title">S&amp;P 500, Dow, Nasdaq Drop As Yields Spike Amid Calls For More Rate Hikes — AMZN, GOOGL, NFLX, SPCX, RKLB In Focus - Stocktwits</div>
+        <div class="desc">S&amp;P 500, Dow, Nasdaq Drop As Yields Spike Amid Calls For More Rate Hikes — AMZN, GOOGL, NFLX, SPCX, RKLB In Focus&amp;nbsp;&amp;nbsp;Stocktwits</div>
         <div class="meta">
-          <a href="https://finance.yahoo.com/m/f0c95ea3-7b96-3a04-82c0-08260c90b7cc/stock-market-today%3B-small.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:35</span>
+          <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxOUTBITFNqVEZEeXh1RW1POWZVTWctSmFvaEhlMEVHYnprSVg3VEZEZW5XSVZ2bjBLLTdfUmd1UXBzdjZoSnVFQWZCdEtuci1GOF9TRFpabjI4dEpsejVlZnl5T0lIVE44dGJaVUpOcHZ3c0s3TkdDdlRHMUNYTjZGeFdQdzI2cS1ZRTRaaDhZUE1GdVMyeExRd25qT2xFV0lNT3VnOTBJbm9SZ2dKbFBvb1QxdTdwbFpRNnpFemhxNVJQRTBMMUhZaWFxRm5DVzAzckxQMUNtQmtDY2FOZ2MwRDZ0b2hJYXZtbEl3VGo2MjlZRlJPLUZRRVVMUGRjMVhIZUZ3?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:27</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">4</span>
-        <span>3 High-Yield Stocks Near Their 52-Week Lows That Dividend Income Investors Are Sleeping On</span>
+        <span>Warren Buffett Has a Stark Warning for Investors as the Market Repeats a Pattern Seen Only Twice in 155 Years</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">3 High-Yield Stocks Near Their 52-Week Lows That Dividend Income Investors Are Sleeping On</div>
-        <div class="desc">These industry leaders are now offering tempting yields.</div>
+        <div class="orig-title">Warren Buffett Has a Stark Warning for Investors as the Market Repeats a Pattern Seen Only Twice in 155 Years</div>
+        <div class="desc">When Buffett speaks, it can pay to listen.</div>
         <div class="meta">
-          <a href="https://www.fool.com/investing/2026/09/23/high-yield-stocks-52-week-lows-income-investors/?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:25</span>
+          <a href="https://www.fool.com/investing/2026/09/24/warren-buffett-has-a-stark-warning-for-investors/?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:25</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>Expedia Stock Is Among Today’s Worst in the S&amp;P 500. Blame Meta’s Muse.</span>
+        <span>These Dow Jones Stocks Buck Index's Dud Performance</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Expedia Stock Is Among Today’s Worst in the S&amp;P 500. Blame Meta’s Muse.</div>
-        <div class="desc">Meta’s Muse release has disrupted stocks of online travel booking platforms. Expedia was among those dropping on Wednesday.</div>
+        <div class="orig-title">These Dow Jones Stocks Buck Index's Dud Performance</div>
+        <div class="desc">Some consumer, technology and industrial components form a solid core of possibilities for investors.</div>
         <div class="meta">
-          <a href="https://finance.yahoo.com/m/0ccd5160-67da-38b4-a8ec-b5b9c885e17b/expedia-stock-is-among.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:19</span>
+          <a href="https://finance.yahoo.com/m/afa9c3a3-e7d3-3493-bd0d-7d661172d1ec/these-dow-jones-stocks-buck.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:14</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">6</span>
-        <span>Why Wall Street Is Aggressively Upgrading These 5 Stocks Right Now</span>
+        <span>Update: Equities Drop Intraday as Yields, Oil Advance</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Why Wall Street Is Aggressively Upgrading These 5 Stocks Right Now</div>
-        <div class="desc">Wall Street is revising assumptions about these S&amp;P 500 stocks thanks to booming AI backlogs and transformed fundamentals.</div>
+        <div class="orig-title">Update: Equities Drop Intraday as Yields, Oil Advance</div>
+        <div class="desc">(Updates with latest market prices and developments.) US equity benchmarks fell intraday as bond</div>
         <div class="meta">
-          <a href="https://finance.yahoo.com/m/297b7387-d6e4-31fc-b9c6-a41434dada5e/why-wall-street-is.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:15</span>
+          <a href="https://finance.yahoo.com/markets/stocks/articles/equities-drop-intraday-yields-oil-180618123.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:06</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">7</span>
-        <span>Meta's Muse reignites AI disruption fears. Traders are targeting this brokerage stock as next casualty</span>
+        <span>Why These S&amp;P 500 Stocks Are Earning The Biggest EPS Upgrades</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Meta's Muse reignites AI disruption fears. Traders are targeting this brokerage stock as next casualty</div>
-        <div class="desc">Meta's latest consumer AI product is sending such big shockwaves through the market that it's even inflaming a long-time rivalry in the brokerage business.</div>
+        <div class="orig-title">Why These S&amp;P 500 Stocks Are Earning The Biggest EPS Upgrades</div>
+        <div class="desc">Wall Street is revising assumptions about these S&amp;P 500 stocks thanks to booming AI backlogs and transformed fundamentals.</div>
         <div class="meta">
-          <a href="https://www.cnbc.com/2026/09/23/metas-muse-ai-causes-schwab-selloff.html" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:06</span>
+          <a href="https://finance.yahoo.com/m/297b7387-d6e4-31fc-b9c6-a41434dada5e/why-these-s%26p-500-stocks-are.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 18:05</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">8</span>
-        <span>Update: Equities Fall Intraday, Yields Surge as Rate Hike Bets Grow</span>
+        <span>Update: US Equity Indexes Fall as 30-Year Treasury Yield Jumps to Highest in 2 Decades, Crude Oil Extends Gains</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Update: Equities Fall Intraday, Yields Surge as Rate Hike Bets Grow</div>
-        <div class="desc">(Updates with latest market prices and developments.) US benchmark stock indexes fell intraday an</div>
+        <div class="orig-title">Update: US Equity Indexes Fall as 30-Year Treasury Yield Jumps to Highest in 2 Decades, Crude Oil Extends Gains</div>
+        <div class="desc">(Updates with index/price moves, macroeconomic data, and geopolitical news from the first paragraph.</div>
         <div class="meta">
-          <a href="https://finance.yahoo.com/markets/stocks/articles/equities-fall-intraday-yields-surge-180218962.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 18:02</span>
+          <a href="https://finance.yahoo.com/markets/articles/us-equity-indexes-fall-30-175735784.html?.tsrc=rss" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 17:57</span>
         </div>
       </div>
     </div>
@@ -1436,120 +1446,120 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
-        <span>Hot Picks: ​Three U.S. stocks spanning consumer brands and AI software</span>
+        <span>PM Carney says it would be ‘irresponsible’ not to prepare for U.S. military action: report. Live updates here.</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Hot Picks: ​Three U.S. stocks spanning consumer brands and AI software</div>
-        <div class="desc">Three U.S. stock picks span SharkNinja, Dynatrace and Amer Sports, with a focus on consumer spending and AI software.</div>
+        <div class="orig-title">PM Carney says it would be ‘irresponsible’ not to prepare for U.S. military action: report. Live updates here.</div>
+        <div class="desc">Prime Minister Mark Carney has carefully examined the possibility of U.S. President Donald Trump ordering a military invasion of Canada, according to a new report.</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/investing/hot-picks/2026/09/23/hot-picks-three-us-stocks-spanning-consumer-brands-and-ai-software/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 22:43</span>
+          <a href="https://www.bnnbloomberg.ca/business/international/2026/09/24/pm-carney-prepared-for-risk-that-trump-might-order-us-led-military-invasion-of-canada-report/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 22:37</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">2</span>
-        <span>Canada joins calls for stronger oversight of AI as Yoshua Bengio addresses UN council</span>
+        <span>Chinese auto companies race ahead on EV technology, achieving 5-minute ultrafast charging</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Canada joins calls for stronger oversight of AI as Yoshua Bengio addresses UN council</div>
-        <div class="desc">Canada was among 20 countries who issued a joint statement during the UN General Assembly on Tuesday calling for stronger oversight of AI, even as the United States was rejecting any push to regulate </div>
+        <div class="orig-title">Chinese auto companies race ahead on EV technology, achieving 5-minute ultrafast charging</div>
+        <div class="desc">On Wednesday, Geely Auto unveiled technology that can charge an electric vehicle battery from 10 per cent to 70 per cent in just 4.5 minutes, a leap analysts called a significant development for the C</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/23/canada-joins-calls-for-stronger-oversight-of-ai-as-yoshua-bengio-addresses-un-council/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 22:39</span>
+          <a href="https://www.bnnbloomberg.ca/business/technology/2026/09/24/chinese-auto-companies-race-ahead-on-ev-technology-achieving-5-minute-ultrafast-charging/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 22:34</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">3</span>
-        <span>Carney promotes ‘nations coming together’ as Trump takes aim at Canada’s immigration. Live updates here.</span>
+        <span>U.S. stocks swing as the bond market, oil prices keep up the pressure</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Carney promotes ‘nations coming together’ as Trump takes aim at Canada’s immigration. Live updates here.</div>
-        <div class="desc">U.S. President Donald Trump says, 'Canada is destroying itself by allowing millions and millions of people into the Country.' Follow for live updates.</div>
+        <div class="orig-title">U.S. stocks swing as the bond market, oil prices keep up the pressure</div>
+        <div class="desc">Stocks swung on Wall Street Thursday amid pressure from the highest bond yields in almost two decades and another rise in crude oil prices.</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/business/international/2026/09/23/carney-promotes-nations-coming-together-as-trump-takes-aim-at-canadas-immigration-live-updates-here/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 22:30</span>
+          <a href="https://www.bnnbloomberg.ca/markets/2026/09/24/us-stocks-swing-as-the-bond-market-oil-prices-keep-up-the-pressure/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 22:33</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">4</span>
-        <span>Market Outlook: Natural gas and AI reshape the case for stocks</span>
+        <span>Investor Outlook: BlackBerry raises forecast on software growth</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Market Outlook: Natural gas and AI reshape the case for stocks</div>
-        <div class="desc">Jamie Murray discusses how natural gas prices, consumer spending and AI adoption are shaping the case for energy, retail and technology stocks.</div>
+        <div class="orig-title">Investor Outlook: BlackBerry raises forecast on software growth</div>
+        <div class="desc">QNX growth lifts BlackBerry’s annual forecast as a commercial truck software win adds more than US$100 million to its royalty backlog.</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/investing/market-outlook/2026/09/23/market-outlook-natural-gas-and-ai-reshape-the-case-for-stocks/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 22:10</span>
+          <a href="https://www.bnnbloomberg.ca/investing/investor-outlook/2026/09/24/investor-outlook-blackberry-raises-forecast-on-software-growth/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 22:29</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>Cineplex names Bill Walker as new chief executive, launches strategic review</span>
+        <span>Trump hails deep friendship with Xi as China’s leader urges ‘healthy’ competition between 2 powers</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Cineplex names Bill Walker as new chief executive, launches strategic review</div>
-        <div class="desc">Cineplex Inc. has named a new leader as the cinema operator embarks on a strategic review that could see the business sold.</div>
+        <div class="orig-title">Trump hails deep friendship with Xi as China’s leader urges ‘healthy’ competition between 2 powers</div>
+        <div class="desc">U.S. President Donald Trump on Thursday hailed the “truly great friendship” he has forged with Xi Jinping as the Chinese leader began his highly anticipated state visit.</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/business/company-news/2026/09/23/cineplex-names-bill-walker-as-new-chief-executive-launches-strategic-review/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 22:03</span>
+          <a href="https://www.bnnbloomberg.ca/business/international/2026/09/24/trump-hails-deep-friendship-with-xi-as-chinas-leader-urges-healthy-competition-between-2-powers/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 22:24</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">6</span>
-        <span>Labour law changes would bring 'sunlight' to collective bargaining: jobs minister</span>
+        <span>GM, Ford to see U.S. market-share slide, forecaster predicts</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Labour law changes would bring 'sunlight' to collective bargaining: jobs minister</div>
-        <div class="desc">Jobs Minister Patty Hajdu says the Liberals’ proposed changes to the Canada Labour Code would bring some much-needed “sunlight” to collective bargaining in federally regulated sectors.</div>
+        <div class="orig-title">GM, Ford to see U.S. market-share slide, forecaster predicts</div>
+        <div class="desc">General Motors and Ford Motor have lost more market share in the United States than any other automakers so far this year as buyers prioritize fuel efficiency amid high gas prices, an industry forecas</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/business/politics/2026/09/23/labour-law-changes-would-bring-sunlight-to-collective-bargaining-jobs-minister/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 21:47</span>
+          <a href="https://www.bnnbloomberg.ca/business/company-news/2026/09/24/gm-ford-to-see-us-market-share-slide-forecaster-predicts/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 22:16</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">7</span>
-        <span>U.S. dollar jumps to near two-month high on Fed outlook, oil climb</span>
+        <span>Kinross shares down more than 10% after lowering gold production forecast</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">U.S. dollar jumps to near two-month high on Fed outlook, oil climb</div>
-        <div class="desc">The U.S. dollar rose to its highest level in nearly two months on Wednesday as investors priced in a rate hike cycle from the U.S. Federal Reserve, while oil prices jumped as comments from Iran cast d</div>
+        <div class="orig-title">Kinross shares down more than 10% after lowering gold production forecast</div>
+        <div class="desc">Shares in Kinross Gold Corp. fell over 10 per cent after the company lowered its production forecast due to extreme weather at its operations in Chile.</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/markets/currencies/2026/09/23/us-dollar-jumps-to-near-two-month-high-on-fed-outlook-oil-climb/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 21:45</span>
+          <a href="https://www.bnnbloomberg.ca/business/company-news/2026/09/24/kinross-shares-down-more-than-10-after-lowering-gold-production-forecast/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 22:05</span>
         </div>
       </div>
     </div>
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">8</span>
-        <span>Canada needs more patriotic investing, Nrth tech conference speakers argue</span>
+        <span>Starbucks to close another 250 coffeehouses in North America</span>
         <span class="arrow">▶</span>
       </div>
       <div class="news-detail">
-        <div class="orig-title">Canada needs more patriotic investing, Nrth tech conference speakers argue</div>
-        <div class="desc">Members of Canada’s business community gathered for an technology conference Wednesday called on institutional investors to take their patriotism even further than they currently do when it comes to t</div>
+        <div class="orig-title">Starbucks to close another 250 coffeehouses in North America</div>
+        <div class="desc">Starbucks will close 250 underperforming coffeehouses in North America, the company said in a regulatory filing on Thursday, as CEO Brian Niccol deepens his turnaround push to revive sales.</div>
         <div class="meta">
-          <a href="https://www.bnnbloomberg.ca/business/technology/2026/09/23/canada-needs-more-patriotic-investing-nrth-tech-conference-speakers-argue/" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 21:44</span>
+          <a href="https://www.bnnbloomberg.ca/business/company-news/2026/09/24/starbucks-to-close-another-250-coffeehouses-in-north-america/" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 21:57</span>
         </div>
       </div>
     </div>
@@ -1560,6 +1570,21 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">1</span>
+        <span>韩国击剑队在2026爱知和名古屋亚运会上以2枚金牌、1枚银牌、1枚铜牌结束了个人赛。 在24日举行的女子佩剑、男子重剑比赛中，韩国未能再添一枚奖牌。女子佩剑的招牌选手全河英24日在日本爱知县爱知天空博.. - 매일경제</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="news-detail">
+        <div class="orig-title">韩国击剑队在2026爱知和名古屋亚运会上以2枚金牌、1枚银牌、1枚铜牌结束了个人赛。 在24日举行的女子佩剑、男子重剑比赛中，韩国未能再添一枚奖牌。女子佩剑的招牌选手全河英24日在日本爱知县爱知天空博.. - 매일경제</div>
+        <div class="desc">韩国击剑队在2026爱知和名古屋亚运会上以2枚金牌、1枚银牌、1枚铜牌结束了个人赛。 在24日��行的女子佩剑、男子重剑比赛中，韩国未能再添一枚奖牌。女子佩剑的招牌选手全河英24日在日本爱知县爱知天空博..&amp;nbsp;&amp;nbsp;매일경제</div>
+        <div class="meta">
+          <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5Zb1p3OC1VamU2VUlCeE43VVd6ZS04Z3l2VUlqVmxoeDNGelVqajU1TnJKRDBLa042d1NfdEdkbTBtWmVSUmRXYmMyZThhb1Vr?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <span class="time">2026-09-24 07:36</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-item" onclick="toggle(this)">
+      <div class="news-title">
+        <span class="num">2</span>
         <span>亚运会丨击剑综合：沈晨鹏获男子佩剑个人赛银牌 - 新华网</span>
         <span class="arrow">▶</span>
       </div>
@@ -1567,23 +1592,8 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
         <div class="orig-title">亚运会丨击剑综合：沈晨鹏获男子佩剑个人赛银牌 - 新华网</div>
         <div class="desc">亚运会丨击剑综合：沈晨鹏获男子佩剑个人赛银牌&amp;nbsp;&amp;nbsp;新华网</div>
         <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5BLTZQMFR2WWRmUDhXaGFMUGY4YWVPTGU4bXF5MDVhLUFzWUVsWlJqLXluVXZ1a3BmRThydU9JbWpJd05PSDk4WmFfaFFob3NwVDBpdUE4Z0x0Z0wtdE5vQXJQZDZuNFF5ZENaOXNpOU1LVHltR0NDSzNxMm8tVkk?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
+          <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPYXB6VTdmMWFramt3UEs2UmRtRWxjVV9VRVlUaFFMdkpkeS16MW1XWFJoQ0w1NXJfNWYtQzFDWnRqOXBtRUdPcHNseXVIRVI4bjJoUzJnR2dFeWQ0S2QxcDBDc2c3bTkyMWRocDhRYTFUTERVMnoyWkk2djNzRjBpdTZ3?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
           <span class="time">2026-09-23 13:26</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">2</span>
-        <span>黄颉歆亚运花剑摘铜 半决赛6比15不敌日本上野优佳 - 8world</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">黄颉歆亚运花剑摘铜 半决赛6比15不敌日本上野优佳 - 8world</div>
-        <div class="desc">黄颉歆亚运花剑摘铜 半决赛6比15不敌日本上野优佳&amp;nbsp;&amp;nbsp;8world</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE41WUVwakZoYnh0TGlWVzlRY09iYjh2d0FLUTF1WldyM21OZk9YbEFjb2xsV1BkX2N3VXVvRUxud3ctMV9vQ2pVal9ldXgzbWlVeXhEa0ZYbWZ1OW5hTU1uRWtVVnp2azNSV0E?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 12:12</span>
         </div>
       </div>
     </div>
@@ -1620,21 +1630,6 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
     <div class="news-item" onclick="toggle(this)">
       <div class="news-title">
         <span class="num">5</span>
-        <span>[名古屋亚运会] 击剑选手Park Jihee摘银：“Ueno实力太强” - 아시아경제</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">[名古屋亚运会] 击剑选手Park Jihee摘银：“Ueno实力太强” - 아시아경제</div>
-        <div class="desc">[名古屋亚运会] 击剑选手Park Jihee摘银：“Ueno实力太强”&amp;nbsp;&amp;nbsp;아시아경제</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNYkhzTVNIeGVoMHd2Wk10OTdsRlVpN1BTMVhaNWh5Z0pwTVhpNjFnUjhia1BHMUNYMlpFMWx1U3V5VGYxWUJWWTNBREM2TlFhQ0RFcDNkWW5jRDNaczBpTkliRU1ERjQwT3V2R2pySXY5M1BlQ0tnbUlDZFlYb0dTbnNoZHdqZw?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 09:07</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">6</span>
         <span>个人花剑半决赛不敌日本选手 击剑女将黄颉歆获得铜牌 - 8world</span>
         <span class="arrow">▶</span>
       </div>
@@ -1644,36 +1639,6 @@ body { font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif; backg
         <div class="meta">
           <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOdnpDQk51a2VTNDJtaTc1SHRtWEQxWlRlVFlrYXFodE5fcTRJYWVja1pFSndCTGNLOGstZDFqa0RUdDBZa2dHbXMtZTNxUllTUm9FbWJISjFPMFZTTlR6YmFTN0ZuVW85Q0tnU29fMld4SG5sSnRTX1Zoc0l5cDF1UkRmMA?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
           <span class="time">2026-09-23 08:14</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">7</span>
-        <span>[名古屋亚运会] 花剑选手Park Jihee锁定银牌，首次闯入决赛- 阿视亚经济 - 아시아경제</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">[名古屋亚运会] 花剑选手Park Jihee锁定银牌，首次闯入决赛- 阿视亚经济 - 아시아경제</div>
-        <div class="desc">[名古屋亚运会] 花剑选手Park Jihee锁定银牌，首次闯入决赛- 阿视亚经济&amp;nbsp;&amp;nbsp;아시아경제</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPUnY2Tmg0REdWU2w5RkJBNHhaMkU0UEN6ZXVrRlpzYjU4SC1IdWxFdnNEOTc3VW92SzFzRFB0Nm40eVhrY3RUSF9CZEhTdVVmbUdqS3R6Vk9vY1RLQnUwQXdRc1dpQ2Rlb0prMFlvZkRGR3Y5U3hfRHdiYzJyWWlPZGVYQmtXdw?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-23 07:57</span>
-        </div>
-      </div>
-    </div>
-    <div class="news-item" onclick="toggle(this)">
-      <div class="news-title">
-        <span class="num">8</span>
-        <span>亚运会｜击剑——男子花剑个人16强赛赛况 - 新华网</span>
-        <span class="arrow">▶</span>
-      </div>
-      <div class="news-detail">
-        <div class="orig-title">亚运会｜击剑——男子花剑个人16强赛赛况 - 新华网</div>
-        <div class="desc">亚运会｜击剑——男子花剑个人16强赛赛况&amp;nbsp;&amp;nbsp;新华网</div>
-        <div class="meta">
-          <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNbFpEU0JOQ1NoLW40LUsxcGNNeGlLMzU0WGo3dDZmYy1FR1A4ZTM1RUFQQzh1cUdJTURZQk13bl8ybVhKWHl3N2IwLVdlYy1LLXgwTkpKSTBTSjVVczZyUzU4NWw3bHdxdGJDb3ZDM3pKbWtGaU5VQ3lFc3ZIRVN6Mg?oc=5" target="_blank" rel="noopener">阅读原文 →</a>
-          <span class="time">2026-09-22 13:22</span>
         </div>
       </div>
     </div>
